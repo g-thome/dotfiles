@@ -11,6 +11,7 @@ set expandtab
 "fecha encapsulação automáticamente
 inoremap " ""<left>
 inoremap ' ''<left>
+inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
@@ -22,11 +23,8 @@ call plug#begin('~/.vim/plugged')
 
 "javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-
-"jsx
 Plug 'mxw/vim-jsx'
-
-"css
+Plug 'elzr/vim-json', { 'for': 'json'}
 
 "emmet
 Plug 'mattn/emmet-vim', { 'for': 'html' }
