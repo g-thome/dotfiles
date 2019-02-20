@@ -26,7 +26,10 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json', { 'for': 'json'}
 
-"emmet
+"html
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+
+"misc
+Plug 'xolox/vim-notes'
 
 call plug#end()
