@@ -29,7 +29,4 @@ Plug 'elzr/vim-json', { 'for': 'json'}
 "html
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
-"misc
-Plug 'xolox/vim-notes'
-
 call plug#end()
