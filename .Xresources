@@ -12,7 +12,7 @@ XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
-Xcursor.theme: xcursor-adwaita:w
+Xcursor.theme: Adwaita
 
 !Xcursor.size:                     0
 !
