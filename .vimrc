@@ -29,4 +29,7 @@ Plug 'elzr/vim-json', { 'for': 'json'}
 "html
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
+"misc
+Plug 'mboughaba/i3config.vim'
+
 call plug#end()
