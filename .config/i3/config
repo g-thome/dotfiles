@@ -33,9 +33,6 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec i3-sensible-terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -49,7 +46,6 @@ bindsym $mod+Shift+Return exec firefox
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
@@ -73,6 +69,9 @@ bindsym $mod+v split v;exec notify-send 'tile vertically'
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+# float current window
+bindsym $mod+Shift+space floating toggle
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
