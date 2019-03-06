@@ -1,8 +1,5 @@
 #!/bin/sh
 alias cp="cp -i"
-alias g="git"
-alias p="sudo pacman"
-alias pss="pacman -Ss --color auto"
 alias df="df -h"
 alias free="free -m"
 alias ls="ls --color=auto"
@@ -11,6 +8,30 @@ alias grep="grep --color=auto"
 alias egrep="egrep --auto=color"
 alias fgrep="fgrep --auto=color"
 alias ccat="highlight --out-format=ansi"
+
+# pacman
+alias p="sudo pacman"
+alias pss="pacman -Ss --color auto"
+
+# git
+alias gst="git status"
+alias gct="git commit -m"
+alias gps="git push"
+alias gpl="git pull"
+alias gre="git remote"
+alias glg="git log"
+alias gck="git checkout"
+alias gad="git add"
+
+# yadm
+alias yst="yadm status"
+alias yct="yadm commit -m"
+alias yps="yadm push"
+alias ypl="yadm pull"
+alias yre="yadm remote"
+alias ylg="yadm log"
+alias yck="yadm checkout"
+alias yad="yadm add"
 
 # archive extractor
 # usage: ex <filename>
