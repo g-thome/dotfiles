@@ -1,5 +1,2 @@
-#
-# ~/.bash_profile
-#
-~/.profile
-~/.bashrc
+source ~/.bashrc
+source ~/.profile
