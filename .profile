@@ -7,3 +7,6 @@ export READER="zathura"
 export FILE="nnn"
 export BROWSER="firefox"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
