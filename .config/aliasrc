@@ -2,7 +2,7 @@
 alias cp="cp -i"
 alias df="df -h"
 alias free="free -m"
-alias ls="ls --color=auto 2>/dev/null || ls -G"
+alias ls="ls --color=auto"
 alias la="ls -a"
 alias grep="grep --color=auto"
 alias egrep="egrep --auto=color"
@@ -12,6 +12,7 @@ alias ccat="highlight --out-format=ansi"
 # pacman
 alias p="sudo pacman"
 alias pss="pacman -Ss --color auto"
+alias pqs="pacman -Qs --color auto"
 
 # git
 alias gst="git status"
