@@ -102,4 +102,13 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
+n() {
+  nnn "$@"
+
+  if [ -f $NNN_TMPFILE ]; then
+    . $NNN_TMPFILE
+    rm -f $NNN_TMPFILE > /dev/null
+  fi
+}
+
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc" 
