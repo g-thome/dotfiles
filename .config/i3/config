@@ -32,7 +32,6 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec i3-sensible-terminal -e 'alsamixer'
 
 ################################################################################################
 
@@ -41,7 +40,6 @@ bindsym $mod+Ctrl+m exec i3-sensible-terminal -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
 bindsym $mod+Shift+Return exec firefox
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
@@ -84,9 +82,9 @@ bindsym $mod+minus scratchpad show
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
+set $ws1 1:
+set $ws2 2:
+set $ws3 3:
 set $ws4 4
 set $ws5 5
 set $ws7 7
@@ -138,12 +136,9 @@ for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
-for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
@@ -168,12 +163,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# Set shut down, restart and locking features
-bindsym $mod+F1 exec --no-startup-id i3exit shutdown, mode "default"
-bindsym $mod+F2 exec --no-startup-id i3exit reboot, mode "default"
-bindsym $mod+F3 exec --no-startup-id i3exit logout, mode "default"
-bindsym $mod+F4 exec --no-startup-id i3exit switch_user, mode "default"
-
 # Resize window (you can also use the mouse for that)
 bindsym $mod+Mod1+h exec --no-startup-id i3resize left
 bindsym $mod+Mod1+j exec --no-startup-id i3resize down
@@ -181,7 +170,7 @@ bindsym $mod+Mod1+k exec --no-startup-id i3resize up
 bindsym $mod+Mod1+l exec --no-startup-id i3resize right
 
 # Lock screen
-bindsym $mod+Ctrl+q exec --no-startup-id blurlock
+bindsym $mod+Ctrl+q exec betterlockscreen --lock blur
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -192,7 +181,6 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec_always --no-startup-id sbxkb
 exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id firefox
 exec_always --no-startup-id telegram-desktop
 
