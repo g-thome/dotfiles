@@ -26,4 +26,5 @@ if [ -f "$usermodmap" ]; then
 fi
 
 exec i3
+eval `~/.fehbg`
 xset r rate 660 25
