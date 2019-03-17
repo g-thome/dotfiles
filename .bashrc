@@ -103,7 +103,7 @@ shopt -s expand_aliases
 shopt -s histappend
 
 n() {
-  nnn "$@"
+  nnn -l "$@"
 
   if [ -f $NNN_TMPFILE ]; then
     . $NNN_TMPFILE
