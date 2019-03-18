@@ -67,7 +67,7 @@ tabspaces: 8
 # Font configuration (changes require restart)
 font:
   normal:
-    family: monospace
+    family: monaco
     style: Regular
   
   # Point size
