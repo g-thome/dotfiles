@@ -3,7 +3,6 @@ syntax on
 set relativenumber number
 set clipboard=unnamedplus
 
-set hlsearch
 "tabs
 set tabstop=2
 set shiftwidth=2
