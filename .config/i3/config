@@ -5,7 +5,7 @@
 set $mod Mod4
 
 #color scheme (monokai)
-set $bg #272822
+set $bg #000000
 set $fg #F8F8F2
 set $white #F8F8F2
 set $grey #75715e
@@ -205,7 +205,6 @@ bar {
 
   bindsym button4 nop
   bindsym button5 nop
-# font xft:URWGothic-Book 11
   strip_workspace_numbers yes
 
   colors {
@@ -214,8 +213,8 @@ bar {
     separator  #454947
 
 #                       border  backgr. text
-    focused_workspace  $fg     $blue   $bg
-    active_workspace   $fg     $blue   $bg
+    focused_workspace  $fg     $white   $bg
+    active_workspace   $fg     $white   $bg
     inactive_workspace #595B5B $bg     $fg
     binding_mode       #16a085 #2C2C2C #F9FAF9
     urgent_workspace   $white  $white  $magenta
