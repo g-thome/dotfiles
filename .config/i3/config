@@ -179,7 +179,7 @@ bindsym $mod+Mod1+k exec --no-startup-id i3resize up
 bindsym $mod+Mod1+l exec --no-startup-id i3resize right
 
 # Lock screen
-bindsym $mod+Ctrl+q exec betterlockscreen --lock blur
+bindsym $mod+Ctrl+q exec i3lock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
