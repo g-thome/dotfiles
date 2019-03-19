@@ -29,6 +29,9 @@ Plug 'elzr/vim-json', { 'for': 'json'}
 "html
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
+"go
+Plug 'fatih/vim-go'
+
 "misc
 Plug 'mboughaba/i3config.vim'
 
