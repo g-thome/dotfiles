@@ -40,7 +40,7 @@ alias yck="yadm checkout"
 alias yad="yadm add"
 alias ydf="yadm diff"
 
-#aliasrc
+#youtube-dl
 alias yt="youtube-dl"
 
 # archive extractor

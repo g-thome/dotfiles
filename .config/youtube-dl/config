@@ -1,1 +1,1 @@
--o ~/Music/%(artist)s/%(album)s/%(track)s.%(ext)s
+--extract-audio --audio-format mp3 -o '~/Music/%(artist)s/%(album)s/%(track)s.%(ext)s'
