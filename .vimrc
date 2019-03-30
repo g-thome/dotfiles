@@ -34,5 +34,6 @@ Plug 'fatih/vim-go'
 
 "misc
 Plug 'mboughaba/i3config.vim'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
