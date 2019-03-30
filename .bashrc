@@ -53,7 +53,7 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="[\u@\h\w]\[\e[32m\]\`parse_git_branch\`\[\e[m\] "
+export PS1="[\u@\w]\[\e[32m\]\`parse_git_branch\`\[\e[m\] "
 # Change the window title of X terminals
 case ${TERM} in
 	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
