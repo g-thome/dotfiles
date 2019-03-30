@@ -1,7 +1,8 @@
+"syntax highlighting
 syntax on
 
+"line numbers
 set relativenumber number
-set clipboard=unnamedplus
 
 "tabs
 set tabstop=2
@@ -31,6 +32,11 @@ Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 "go
 Plug 'fatih/vim-go'
+
+"css
+Plug 'ap/vim-css-color'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'hail2u/vim-css3-syntax'
 
 "misc
 Plug 'mboughaba/i3config.vim'
