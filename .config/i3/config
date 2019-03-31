@@ -87,27 +87,21 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Workspace names
-# to display names or symbols instead of plain workspace numbers you can use
-# something like: set $ws1 1:mail
-#                 set $ws2 2:
-set $ws1 1:
+set $ws1 1:
 set $ws2 2:
 set $ws3 3:
-set $ws4 4
+set $ws4 4:
 set $ws5 5
+set $ws6 6
 set $ws7 7
-set $ws8 8
-set $ws10 10
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+0 workspace $ws10
+bindsym $mod+0 workspace $ws4
+bindsym $mod+9 workspace $ws5
+bindsym $mod+8 workspace $ws6
 
 # move through workspaces
 bindsym $mod+Ctrl+j workspace prev
