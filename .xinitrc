@@ -25,6 +25,8 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+dunst > /dev/null 2>&1 &
+
+~/.fehbg &
+
 exec i3
-eval `~/.fehbg`
-xset r rate 660 25
