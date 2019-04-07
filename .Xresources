@@ -18,16 +18,17 @@ Xcursor.theme: Adwaita
 !
 *fading:                          8
 *fadeColor:                       black
-*pointerColorBackground:          #2B2C2B
+*pointerColorBackground:          #000000
 *pointerColorForeground:          #16A085
 
 ! special
 *.foreground:   #f8f8f2
+*.background:   #000000
 *.cursorColor:  #f8f8f2
 
 ! black
-*.color0:       #272822
-*.color8:       #75715e
+*.color0:       #000000
+*.color8:       #000000
 
 ! red
 *.color1:       #f92672
@@ -57,4 +58,4 @@ Xcursor.theme: Adwaita
 *.color7:       #f8f8f2
 *.color15:      #f9f8f5
 
-xft:PowerlineSymbols:size=10
+st.font: Monaco:size=10
