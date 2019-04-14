@@ -9,6 +9,9 @@ alias egrep="egrep --auto=color"
 alias fgrep="fgrep --auto=color"
 alias ccat="highlight --out-format=ansi"
 
+# npm
+alias ni="npm install"
+
 # pacman
 alias p="sudo pacman"
 alias pss="pacman -Ss --color auto"
