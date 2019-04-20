@@ -9,15 +9,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-"fecha encapsulação automáticamente
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ` ``<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
 
 "plugins
 call plug#begin('~/.vim/plugged')
@@ -41,5 +32,6 @@ Plug 'hail2u/vim-css3-syntax'
 "misc
 Plug 'mboughaba/i3config.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-surround'
 
 call plug#end()
