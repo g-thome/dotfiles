@@ -11,6 +11,8 @@ alias ccat="highlight --out-format=ansi"
 
 # npm
 alias ni="npm install"
+alias nst="npm start"
+alias nrn="npm run"
 
 # pacman
 alias p="sudo pacman"
