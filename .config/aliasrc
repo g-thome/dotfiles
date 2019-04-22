@@ -9,13 +9,20 @@ alias egrep="egrep --auto=color"
 alias fgrep="fgrep --auto=color"
 alias ccat="highlight --out-format=ansi"
 
+# npm
+alias ni="npm install"
+alias nst="npm start"
+alias nrn="npm run"
+
 # pacman
 alias p="sudo pacman"
 alias pss="pacman -Ss --color auto"
 alias pqs="pacman -Qs --color auto"
+alias pu="sudo pacman -Syu"
 
 #yay
 alias y="yay --color=auto"
+alias yu="yay -Syu"
 
 # git
 alias gst="git status"
@@ -46,28 +53,4 @@ alias d="sudo docker"
 #youtube-dl
 alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
 alias ytv="youtube-dl --add-metadata -f bestvideo+bestaudio/best -o '~/Videos/%(title)s.%(ext)s'"
-
-# archive extractor
-# usage: ex <filename>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
 
