@@ -4,6 +4,8 @@ syntax on
 "line numbers
 set relativenumber number
 
+set clipboard+=unnamedplus
+
 "tabs
 set tabstop=2
 set shiftwidth=2
@@ -12,18 +14,6 @@ set expandtab
 " backup files
 set nobackup
 set nowritebackup
-
-" tab for coc autocompletion
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? \<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1] =~# '\s'
-endfunction
 
 "plugins
 call plug#begin('~/.vim/plugged')
@@ -48,6 +38,6 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'mboughaba/i3config.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
 call plug#end()
