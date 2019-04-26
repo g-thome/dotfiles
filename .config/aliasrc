@@ -8,6 +8,7 @@ alias grep="grep --color=auto"
 alias egrep="egrep --auto=color"
 alias fgrep="fgrep --auto=color"
 alias ccat="highlight --out-format=ansi"
+alias e="nvim"
 
 # npm
 alias ni="npm install"
