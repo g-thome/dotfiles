@@ -91,9 +91,8 @@ set $ws1 1:
 set $ws2 2:
 set $ws3 3:
 set $ws4 4:
-set $ws5 5
-set $ws6 6
-set $ws7 7
+set $ws5 5:
+set $ws6 6:misc
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -139,7 +138,6 @@ for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
-for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
@@ -183,9 +181,7 @@ bar {
   status_command i3status
   position bottom
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
-#	tray_output eDP1
 
   bindsym button4 nop
   bindsym button5 nop

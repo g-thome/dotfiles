@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/.config/i3/scripts"
+export PATH="$PATH:$HOME/.config/i3/scripts:$HOME/scripts"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL="alacritty"
 export VISUAL="nvim"
