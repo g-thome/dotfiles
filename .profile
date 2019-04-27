@@ -1,6 +1,6 @@
 export PATH="$PATH:$HOME/.config/i3/scripts:$HOME/scripts"
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export TERMINAL="alacritty"
+export TERMINAL="xst"
 export VISUAL="nvim"
 export EDITOR="nvim"
 export READER="zathura"
