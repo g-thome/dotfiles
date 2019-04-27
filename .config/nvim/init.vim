@@ -1,3 +1,5 @@
+let g:mapleader=','
+
 "syntax highlighting
 syntax on
 
@@ -58,6 +60,9 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 "auto close html and xml tags
 Plug 'alvan/vim-closetag'
 
+"navigate through files
+Plug 'Shougo/denite.nvim'
+
 "take notes
 Plug 'xolox/vim-notes'
 
@@ -65,3 +70,9 @@ Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 
 call plug#end()
+
+"denite configs
+nmap ; :Denite buffer -split=floating -winrow=1<CR>
+nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
+nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
+nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
