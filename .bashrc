@@ -4,8 +4,6 @@
 
 [[ $- != *i* ]] && return
 
-[ -f "$HOME/functions" ] && source "$HOME/functions"
-
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 export PS1="[\u@\w]\[\e[32m\]\`parse_git_branch\`\[\e[m\] "
