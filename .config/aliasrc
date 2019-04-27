@@ -9,6 +9,8 @@ alias egrep="egrep --auto=color"
 alias fgrep="fgrep --auto=color"
 alias ccat="highlight --out-format=ansi"
 alias e="nvim"
+alias vi="nvim"
+alias vim="nvim"
 
 # npm
 alias ni="npm install"
@@ -16,7 +18,7 @@ alias nst="npm start"
 alias nrn="npm run"
 
 # pacman
-alias p="sudo pacman"
+alias p="sudo pacman --noconfirm"
 alias pss="pacman -Ss --color auto"
 alias pqs="pacman -Qs --color auto"
 alias pu="sudo pacman -Syu"
