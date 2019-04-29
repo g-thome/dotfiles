@@ -1,6 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # set mouse speed
-mspeed() {
-  xinput set-prop 8 141 $1 0 0 0 $1 0 0 0 1
-}
+xinput set-prop 8 141 $1 0 0 0 $1 0 0 0 1
