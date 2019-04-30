@@ -1,13 +1,20 @@
 #!/bin/sh
+# misc
 alias cp="cp -i"
 alias df="df -h"
 alias free="free -m"
+
+# ls
 alias ls="ls --color=auto"
 alias la="ls -a"
+
+# grep
 alias grep="grep --color=auto"
 alias egrep="egrep --auto=color"
 alias fgrep="fgrep --auto=color"
 alias ccat="highlight --out-format=ansi"
+
+# editor
 alias e="nvim"
 alias vi="nvim"
 alias vim="nvim"
