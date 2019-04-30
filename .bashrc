@@ -6,6 +6,9 @@
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
+# allows ctrl-s as save command for vim
+stty -ixon
+
 export PS1="[\u@\w]\[\e[32m\]\`parse_git_branch\`\[\e[m\] "
 # Change the window title of X terminals
 case ${TERM} in
