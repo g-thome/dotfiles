@@ -1,24 +1,6 @@
-let g:mapleader=','
-
-"syntax highlighting
-syntax on
-
-"line numbers
-set relativenumber number
-
-"set system clipboard
-set clipboard+=unnamedplus
-
-"tabs
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-"backup files
-set nobackup
-set nowritebackup
-
-"plugins
+""""""""""""""""""""""""""""
+""""""""""plugins"""""""""""
+""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
 "javascript syntac highlighting
@@ -70,6 +52,41 @@ Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 
 call plug#end()
+""""""""""""""""""""""""""""
+""""""""""\plugins"""""""""""
+""""""""""""""""""""""""""""
+
+
+
+
+"unicode
+set encoding=utf-8
+
+" ` character acessible through ,
+let g:mapleader=','
+
+" copy paste
+vnoremap <C-c> "+y
+map <C-p> "+p
+
+"syntax highlighting
+syntax on
+
+"line numbers
+set relativenumber number
+
+"set system clipboard
+set clipboard+=unnamedplus
+
+"tabs
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+"backup files
+set nobackup
+set nowritebackup
+
 
 "denite configs
 nmap ; :Denite buffer -split=floating -winrow=1<CR>
