@@ -45,6 +45,8 @@ alias gck="git checkout"
 alias gad="git add"
 alias gdf="git diff"
 alias gcl="git clone"
+alias grt="git reset"
+alias grtl="git reset --soft HEAD~1"
 
 # yadm
 alias yst="yadm status"
@@ -56,6 +58,8 @@ alias ylg="yadm log"
 alias yck="yadm checkout"
 alias yad="yadm add"
 alias ydf="yadm diff"
+alias yrt="yadm reset"
+alias yrtl="yadm reset --soft HEAD~1"
 
 # docker
 alias d="sudo docker"
