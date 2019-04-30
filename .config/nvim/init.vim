@@ -87,6 +87,10 @@ set expandtab
 set nobackup
 set nowritebackup
 
+" save file
+noremap <silent> <C-S>    :update<CR>
+vnoremap <silent> <C-S>   <C-C>:update<CR>
+inoremap <silent> <C-S>   <C-O>:update<CR>
 
 "denite configs
 nmap ; :Denite buffer -split=floating -winrow=1<CR>
