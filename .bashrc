@@ -36,6 +36,9 @@ shopt -s checkwinsize
 
 shopt -s expand_aliases
 
+# implicit cd
+shopt -s autocd
+
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
