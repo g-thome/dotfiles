@@ -7,6 +7,7 @@ alias free="free -m"
 # ls
 alias ls="ls --color=auto"
 alias la="ls -a"
+alias ll="ls -la"
 
 # grep
 alias grep="grep --color=auto"
