@@ -18,4 +18,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(nodenv init -)"
 
+eval $(op signin my)
+
 source "$HOME/.bashrc"
