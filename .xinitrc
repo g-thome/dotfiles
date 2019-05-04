@@ -6,27 +6,33 @@ userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
+modmaprc=$HOME/.xmodmaprc
 
 # merge in defaults and keymaps
+[[ -f $sysresources ]] && xrdb -merge $sysresources
 
-if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
-fi
 
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
-fi
+[[ -f $sysmodmap ]] && xmodmap $sysmodmap
 
-if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
-fi
 
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
-fi
+[[ -f "$userresources" ]] && xrdb -merge "$userresources"
 
+
+[[ -f "$usermodmap" ]] && xmodmap "$usermodmap"
+
+[[ -f "$modmaprc" ]] && xmodmap "$modmaprc"
+
+# hold caps_lock -> super
+setxkbmap -option caps:super
+
+# press caps_lock -> esc
+killall xcape 2>/dev/null; xcape -e 'Super_L=Escape'
+
+# start notifications manager
 dunst > /dev/null 2>&1 &
 
+# sets wallpaper
 ~/.fehbg &
 
+# start window manager
 exec i3
