@@ -31,10 +31,7 @@ bindsym $mod+Return exec xst
 bindsym $mod+q kill
 
 # start program launcher
-bindsym $mod+space exec --no-startup-id rofi -show run
-
-# launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
+bindsym $mod+d exec --no-startup-id rofi -show run
 
 ################################################################################################
 ## sound-section  
@@ -43,10 +40,6 @@ bindsym $mod+z exec --no-startup-id morc_menu
 exec --no-startup-id volumeicon
 
 ################################################################################################
-
-# Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
 bindsym $mod+Shift+Return exec firefox
@@ -101,10 +94,6 @@ bindsym $mod+3 workspace $ws3
 bindsym $mod+0 workspace $ws4
 bindsym $mod+9 workspace $ws5
 bindsym $mod+8 workspace $ws6
-
-# move through workspaces
-bindsym $mod+Ctrl+j workspace prev
-bindsym $mod+Ctrl+k workspace next
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
