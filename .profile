@@ -21,3 +21,7 @@ eval "$(nodenv init -)"
 eval $(op signin my)
 
 source "$HOME/.bashrc"
+
+if [[ !$DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
