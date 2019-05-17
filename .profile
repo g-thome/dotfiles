@@ -1,3 +1,5 @@
+#!/bin/sh
+
 export PATH="$PATH:$(find /home/gabriel/scripts -type d -printf ":%p")"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL="xst"
@@ -18,10 +20,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(nodenv init -)"
 
-eval $(op signin my)
+. "/home/gabriel/.bashrc"
 
-source "$HOME/.bashrc"
-
-if [[ !$DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
-fi
+[ ! $DISPLAY ] && [ $XDG_VTNR -eq 1 ] && exec startx
