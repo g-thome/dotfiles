@@ -1,3 +1,17 @@
+"auto install vim-plug
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  if !executable("curl")
+    echoerr "couldn't install vim-plug: curl not found"
+    execute "q!"
+  endif
+  echo "installing vim-plug"
+  echo ""
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+"install plugins
 call plug#begin('~/.vim/plugged')
 
   "javascript syntac highlighting
