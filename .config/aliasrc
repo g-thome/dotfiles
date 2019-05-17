@@ -63,6 +63,13 @@ alias ydf="yadm diff"
 alias yrt="yadm reset"
 alias yrtl="yadm reset --soft HEAD~1"
 
+# systemd
+alias s="sudo systemctl"
+alias sst="sudo systemctl start"
+alias stp="sudo systemctl stop"
+alias srs="sudo systemctl restart"
+alias se="sudo systemctl enable"
+
 # docker
 alias d="sudo docker"
 
