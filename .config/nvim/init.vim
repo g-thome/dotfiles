@@ -83,6 +83,14 @@ noremap <silent> <C-S>    :update<CR>
 vnoremap <silent> <C-S>   <C-C>:update<CR>
 inoremap <silent> <C-S>   <C-O>:update<CR>
 
+"persistent undo
+if !isdirectory($HOME."/.config/nvim/undo-dir")
+  call mkdir($HOME."/.config/nvim/undo-dir", "", 0700)
+endif
+
+set undodir=~/.config/nvim/undo-dir
+set undofile
+
 "denite configs
 nmap ; :Denite buffer -split=floating -winrow=1<CR>
 nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
