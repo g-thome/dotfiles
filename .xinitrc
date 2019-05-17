@@ -24,8 +24,5 @@ killall xcape 2>/dev/null; xcape -e 'Super_L=Escape'
 # start notifications manager
 dunst > /dev/null 2>&1 &
 
-# sets wallpaper
-~/.fehbg &
-
 # start window manager
 exec i3
