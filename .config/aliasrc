@@ -32,8 +32,9 @@ alias pqs="pacman -Qs --color auto"
 alias pu="sudo pacman -Syu"
 
 #yay
-alias y="yay --color=auto"
-alias yu="yay -Syu"
+alias a="yay --color=auto"
+alias au="yay -Syu"
+alias ass="yay -Ss"
 
 # git
 alias gst="git status"
