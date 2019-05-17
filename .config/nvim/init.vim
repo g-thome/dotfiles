@@ -80,8 +80,11 @@ syntax on
 "line numbers
 set relativenumber number
 
-"set system clipboard
+"system clipboard as yank clipboard
 set clipboard+=unnamedplus
+
+"reload externally modified files
+set autoread
 
 "tabs
 set tabstop=2
