@@ -59,6 +59,9 @@ call plug#begin('~/.vim/plugged')
   "take notes
   Plug 'xolox/vim-notes'
   
+  "latex live preview
+  Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } 
+
   "misc (vim-notes dependency)
   Plug 'xolox/vim-misc'
 
