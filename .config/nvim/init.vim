@@ -59,6 +59,9 @@ call plug#begin('~/.vim/plugged')
   "take notes
   Plug 'xolox/vim-notes'
   
+  "latex live preview
+  Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } 
+
   "misc (vim-notes dependency)
   Plug 'xolox/vim-misc'
 
@@ -95,7 +98,7 @@ set expandtab
 set nobackup
 set nowritebackup
 
-" save file
+" save file on <c-s>
 noremap <silent> <C-S>    :update<CR>
 vnoremap <silent> <C-S>   <C-C>:update<CR>
 inoremap <silent> <C-S>   <C-O>:update<CR>
@@ -113,3 +116,9 @@ nmap ; :Denite buffer -split=floating -winrow=1<CR>
 nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
 nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
 nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
+
+"coc
+"completion on <c-space>
+inoremap <silent><expr> <c-space> coc#refresh()
+
+
