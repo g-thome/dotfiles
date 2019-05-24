@@ -68,6 +68,9 @@ call plug#begin('~/.vim/plugged')
   "misc (vim-notes dependency)
   Plug 'xolox/vim-misc'
 
+  "latex integration
+  Plug 'lervag/vimtex'
+
 call plug#end()
 
 "unicode
