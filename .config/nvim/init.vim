@@ -79,9 +79,8 @@ set encoding=utf-8
 " ` character acessible through ,
 let g:mapleader=','
 
-" copy paste
+" copy to system clipboard
 vnoremap <C-c> "+y
-map <C-p> "+p
 
 "syntax highlighting
 syntax on
