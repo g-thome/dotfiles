@@ -61,6 +61,9 @@ call plug#begin('~/.vim/plugged')
   
   "latex live preview
   Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } 
+  
+  "sublime text multiple cursor feature
+  Plug 'terryma/vim-multiple-cursors'
 
   "misc (vim-notes dependency)
   Plug 'xolox/vim-misc'
