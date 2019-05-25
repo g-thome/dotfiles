@@ -1,0 +1,11 @@
+# volume up
+"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+  Vol+
+
+# mute volume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send 'mute'"
+  XF86AudioMute
+
+# mute volume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  Mute

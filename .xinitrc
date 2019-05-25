@@ -21,6 +21,9 @@ setxkbmap -option caps:super
 # press caps_lock -> esc
 killall xcape 2>/dev/null; xcape -e 'Super_L=Escape'
 
+# keybindings
+xbindkeys -f ~/.config/xbindkeysrc
+
 # start notifications manager
 dunst > /dev/null 2>&1 &
 
