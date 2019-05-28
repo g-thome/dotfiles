@@ -1,3 +1,7 @@
+" python
+let g:python_host_prog = '~/.pyenv/versions/2.7.15/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/3.7.1/bin/python'
+
 " text encoding
 set encoding=utf-8
 
