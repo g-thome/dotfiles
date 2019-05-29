@@ -71,6 +71,9 @@ call plug#begin('~/.vim/plugged')
   "latex integration
   Plug 'lervag/vimtex'
 
+  "auto pair
+  Plug 'cohama/lexima.vim'
+
 call plug#end()
 
 "unicode
