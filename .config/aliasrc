@@ -31,8 +31,9 @@ alias pss="pacman -Ss --color auto"
 alias pqs="pacman -Qs --color auto"
 alias pu="sudo pacman -Syu"
 
-#yay
-alias a="yay --color=auto"
+#aur
+alias yay="yay --color=auto"
+alias a="yay" 
 alias au="yay -Syu"
 alias ass="yay -Ss"
 
