@@ -43,7 +43,7 @@ alias pr="pacman -Rns"
 
 #aur
 alias yay="yay --color=auto"
-alias a="yay" 
+alias a="yay --noconfirm" 
 alias au="yay -Syu"
 alias ass="yay -Ss"
 
