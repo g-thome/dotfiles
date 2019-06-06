@@ -21,5 +21,3 @@ eval "$(pyenv virtualenv-init -)"
 eval "$(nodenv init -)"
 
 . "/home/gabriel/.bashrc"
-
-[ ! $DISPLAY ] && [ $XDG_VTNR -eq 1 ] && exec startx

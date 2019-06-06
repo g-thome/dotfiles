@@ -43,3 +43,5 @@ shopt -s autocd
 shopt -s histappend
 
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc" 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
