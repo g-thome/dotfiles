@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   
   "jsx syntax highlighting
-  Plug 'mxw/vim-jsx'
+  Plug 'mxw/vim-jsx', { 'for': 'javascript' }
   
   "json syntax highlighting
   Plug 'elzr/vim-json', { 'for': 'json'}
@@ -26,7 +26,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/emmet-vim', { 'for': 'html' }
   
   "go
-  Plug 'fatih/vim-go'
+  Plug 'fatih/vim-go', { 'for': 'go' }
   
   "colored color codes
   Plug 'ap/vim-css-color'
@@ -68,6 +68,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'xolox/vim-misc'
 
   "latex integration
-  Plug 'lervag/vimtex'
+  Plug 'lervag/vimtex', { 'for': 'tex' }
 
 call plug#end()
