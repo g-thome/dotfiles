@@ -32,13 +32,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'ap/vim-css-color'
   
   "scss syntax highlighting
-  Plug 'cakebaker/scss-syntax.vim'
+  Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
   
   "css3 syntax highlighting
-  Plug 'hail2u/vim-css3-syntax'
-  
-  "i3wm syntax highlighting
-  Plug 'mboughaba/i3config.vim'
+  Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
   
   "zen mode
   Plug 'junegunn/goyo.vim'
