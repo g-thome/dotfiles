@@ -25,7 +25,7 @@ default_border pixel 2
 font xft:SF Pro Display 11
 
 # start a terminal
-bindsym $mod+Return exec xst
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
