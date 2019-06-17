@@ -6,56 +6,6 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*pointerColor:      #1ABB9B
-XTerm*faceName:          Fixed
-XTerm*faceSize:          11
-XTerm*reverseVideo:      on
-XTerm*selectToClipboard: true
-
 Xcursor.theme: Adwaita
-
-!Xcursor.size:                     0
-!
-*fading:                          8
-*fadeColor:                       black
-*pointerColorBackground:          #000000
-*pointerColorForeground:          #16A085
-
-! special
-*.foreground:   #f8f8f2
-*.background:   #000000
-*.cursorColor:  #f8f8f2
-
-! black
-*.color0:       #000000
-*.color8:       #000000
-
-! red
-*.color1:       #f92672
-*.color9:       #f92672
-
-! green
-*.color2:       #a6e22e
-*.color10:      #a6e22e
-
-! yellow
-*.color3:       #f4bf75
-*.color11:      #f4bf75
-
-! blue
-*.color4:       #66d9ef
-*.color12:      #66d9ef
-
-! magenta
-*.color5:       #ae81ff
-*.color13:      #ae81ff
-
-! cyan
-*.color6:       #a1efe4
-*.color14:      #a1efe4
-
-! white
-*.color7:       #f8f8f2
-*.color15:      #f9f8f5
 
 st.font: Monaco:size=10
