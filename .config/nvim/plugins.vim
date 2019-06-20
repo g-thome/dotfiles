@@ -19,9 +19,6 @@ call plug#begin('~/.vim/plugged')
   "jsx syntax highlighting
   Plug 'mxw/vim-jsx', { 'for': 'javascript' }
   
-  "json syntax highlighting
-  Plug 'elzr/vim-json', { 'for': 'json'}
-  
   "emmet
   Plug 'mattn/emmet-vim', { 'for': 'html' }
   
@@ -49,9 +46,6 @@ call plug#begin('~/.vim/plugged')
   "auto close html and xml tags
   Plug 'alvan/vim-closetag'
   
-  "navigate through files
-  Plug 'Shougo/denite.nvim'
-  
   "take notes
   Plug 'xolox/vim-notes'
   
@@ -66,5 +60,11 @@ call plug#begin('~/.vim/plugged')
 
   "latex integration
   Plug 'lervag/vimtex', { 'for': 'tex' }
+
+  "glsl syntax highlighting
+  Plug 'tikhomirov/vim-glsl'
+
+  "omnisharp
+  Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
