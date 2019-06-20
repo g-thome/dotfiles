@@ -65,6 +65,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tikhomirov/vim-glsl'
 
   "omnisharp
-  Plug 'OmniSharp/omnisharp-vim'
+  Plug 'OmniSharp/omnisharp-vim', { 'for': 'csharp' }
 
 call plug#end()
