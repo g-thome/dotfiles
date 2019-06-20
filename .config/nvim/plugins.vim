@@ -67,4 +67,7 @@ call plug#begin('~/.vim/plugged')
   "omnisharp
   Plug 'OmniSharp/omnisharp-vim', { 'for': 'csharp' }
 
+  "show open buffers in status line
+  Plug 'bling/vim-bufferline'
+
 call plug#end()

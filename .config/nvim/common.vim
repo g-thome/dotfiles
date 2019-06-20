@@ -34,3 +34,6 @@ endif
 set undodir=~/.config/nvim/undo-dir
 set undofile
 
+"statusline
+set statusline=
+set statusline+=\ %f
