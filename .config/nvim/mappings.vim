@@ -12,3 +12,8 @@ inoremap <silent> <C-S>   <C-O>:update<CR>
 " navigate splits smoothly
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
+
+" cycle through buffers
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>

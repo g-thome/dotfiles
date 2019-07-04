@@ -70,4 +70,8 @@ call plug#begin('~/.vim/plugged')
   "show open buffers in status line
   Plug 'bling/vim-bufferline'
 
+  "fuzzy finder
+  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf.vim'
+
 call plug#end()
