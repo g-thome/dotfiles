@@ -39,6 +39,11 @@ shopt -s expand_aliases
 # implicit cd
 shopt -s autocd
 
+# virtual environments
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(nodenv init -)"
+
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
