@@ -1,14 +1,3 @@
-"denite 
-"; to navigate open files
-nmap ; :Denite buffer -split=floating -winrow=1<CR>
-
-"`t to open a new file
-nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
-
-"search for words
-nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
-nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
-
 "coc
 "completion on <c-space>
 inoremap <silent><expr> <c-space> coc#refresh()

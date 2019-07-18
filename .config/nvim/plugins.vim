@@ -52,9 +52,6 @@ call plug#begin('~/.vim/plugged')
   "auto close html and xml tags
   Plug 'alvan/vim-closetag'
   
-  "navigate through files
-  Plug 'Shougo/denite.nvim'
-  
   "take notes
   Plug 'xolox/vim-notes'
   
