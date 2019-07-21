@@ -70,4 +70,7 @@ call plug#begin('~/.vim/plugged')
   "latex integration
   Plug 'lervag/vimtex'
 
+  "comment stuff out
+  Plug 'tpope/vim-commentary'
+
 call plug#end()
