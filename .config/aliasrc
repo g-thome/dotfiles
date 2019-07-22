@@ -26,7 +26,7 @@ alias egrep="egrep --auto=color"
 alias fgrep="fgrep --auto=color"
 alias ccat="highlight --out-format=ansi"
 
-# editor
+# nvim
 alias e="nvim"
 alias vi="nvim"
 alias vim="nvim"
@@ -76,6 +76,7 @@ alias grt="git reset"
 alias grtl="git reset --soft HEAD~1"
 alias gmr="git merge"
 alias gtg="git tag"
+alias gfc="git fetch"
 
 # yadm
 alias y="yadm"
@@ -105,3 +106,5 @@ alias d="sudo docker"
 alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
 alias ytv="youtube-dl --add-metadata -f bestvideo+bestaudio/best -o '~/Videos/%(title)s.%(ext)s'"
 
+# wallpaper
+alias wall="xwallpaper --zoom"
