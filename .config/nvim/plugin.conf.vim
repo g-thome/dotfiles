@@ -24,3 +24,9 @@ inoremap <silent><expr> <TAB>
   \ <SID>check_back_space() ? "\<TAB>" :
   \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+"open a new file
+nmap <leader>t :FZF
+
+"show open buffers
+nmap ; :Buffers<CR>

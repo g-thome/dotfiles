@@ -67,4 +67,8 @@ call plug#begin('~/.vim/plugged')
   "latex integration
   Plug 'lervag/vimtex'
 
+  " fuzzy finder
+  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf.vim'
+
 call plug#end()
