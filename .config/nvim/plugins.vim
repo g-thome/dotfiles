@@ -71,4 +71,7 @@ call plug#begin('~/.vim/plugged')
   Plug '/usr/local/opt/fzf'
   Plug 'junegunn/fzf.vim'
 
+  "comment stuff out
+  Plug 'tpope/vim-commentary'
+
 call plug#end()

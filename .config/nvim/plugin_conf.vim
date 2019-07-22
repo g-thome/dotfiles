@@ -1,3 +1,14 @@
+"denite 
+"; to navigate open files
+nmap ; :Denite buffer -split=floating -winrow=1<CR>
+
+"`t to open a new file
+nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
+
+"search for words
+nnoremap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
+nnoremap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
+
 "coc
 "completion on <c-space>
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -24,12 +35,3 @@ inoremap <silent><expr> <TAB>
   \ <SID>check_back_space() ? "\<TAB>" :
   \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-"open a new file
-nmap <leader>t :FZF
-
-"show open buffers
-nmap ; :Buffers<CR>
-
-"vim-go
-let g:go_def_mapping_enabled = 0
