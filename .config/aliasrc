@@ -1,4 +1,15 @@
 #!/bin/sh
+# alias
+alias aliasls="alias | grep --color=never ls"
+alias aliasgrep="alias | grep --color=never grep"
+alias aliasnpm="alias | grep --color=never npm"
+alias aliaspacman="alias | grep --color=never pacman"
+alias aliasyay="alias | grep --color=never yay"
+alias aliasaur="aliasyay"
+alias aliassystemd="alias | grep --color=never systemd"
+alias aliasdocker="alias | grep --color=never docker"
+alias aliasyoutubedl="alias | grep --color=never youtube"
+
 # misc
 alias cp="cp -i"
 alias df="df -h"
