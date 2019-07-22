@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$PATH:$(find /home/gabriel/scripts -type d -printf ":%p"):$GOPATH"
+export PATH="$PATH:$(find /home/gabriel/scripts -type d -printf ":%p"):$HOME/go/bin"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL="xst"
 export VISUAL="nvim"
@@ -15,6 +15,7 @@ export NNN_USE_EDITOR=1
 export NNN_OPS_PROG=1
 
 export GOPATH="$HOME/go"
+export GOBIN="$HOME/go/bin"
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
