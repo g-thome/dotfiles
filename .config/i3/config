@@ -42,6 +42,7 @@ bindsym $mod+Shift+Tab exec single_monitor
 ################################################################################################
 
 exec --no-startup-id volumeicon
+exec --no-startup-id polybar -r main
 
 ################################################################################################
 
@@ -166,42 +167,6 @@ exec --no-startup-id clipit
 exec_always --no-startup-id sbxkb
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id firefox
-
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-  i3bar_command i3bar
-  status_command i3status
-  position bottom
-
-	tray_output primary
-
-  bindsym button4 nop
-  bindsym button5 nop
-  strip_workspace_numbers yes
-
-  colors {
-    background $bg
-    statusline $fg
-    separator  #454947
-
-#                       border  backgr. text
-    focused_workspace  $fg     $white   $bg
-    active_workspace   $fg     $white   $bg
-    inactive_workspace #595B5B $bg     $fg
-    binding_mode       #16a085 #2C2C2C #F9FAF9
-    urgent_workspace   $white  $white  $magenta
-  }
-}
-#
-# Theme colors
-# class                 border  backgr. text    indic.   child_border
-client.focused          #ffffff #ffffff #000000 #f92672
-client.focused_inactive #FFFFFF #000000 #000000 #f92672
-client.unfocused        #FFFFFF #000000 #000000
-client.urgent           #16a085 #000000 #F9FAF9
-client.placeholder      #000000 #000000 #F9FAF9
-
-client.background       #2B2C2B
 
 #############################
 ### settings for i3-gaps: ###
