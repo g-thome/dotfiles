@@ -24,8 +24,12 @@ killall xcape 2>/dev/null; xcape -e 'Super_L=Escape'
 # keybindings
 xbindkeys -f ~/.config/xbindkeysrc
 
-# start notifications manager
+# notifications manager
 dunst > /dev/null 2>&1 &
 
-# start window manager
+# wallpaper
+xwallpaper --zoom Pictures/Wallpapers/L_samurai_japan_flag.jpg
+
+# window manager
 exec i3
+
