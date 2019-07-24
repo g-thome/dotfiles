@@ -115,6 +115,10 @@ bindsym $mod+Shift+0 move container to workspace $ws4; workspace $ws4
 bindsym $mod+Shift+9 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+8 move container to workspace $ws6; workspace $ws6
 
+# Move workspace to monitor
+bindsym $mod+Ctrl+j move workspace to output down
+bindsym $mod+Ctrl+k move workspace to output up
+
 # Open applications on specific workspaces
 assign [class="Firefox"] $ws2
 assign [class="Telegram"] $ws3
