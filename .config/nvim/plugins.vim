@@ -19,9 +19,6 @@ call plug#begin('~/.vim/plugged')
   "jsx syntax highlighting
   Plug 'mxw/vim-jsx'
   
-  "json syntax highlighting
-  Plug 'elzr/vim-json', { 'for': 'json'}
-  
   "emmet
   Plug 'mattn/emmet-vim', { 'for': 'html' }
   
