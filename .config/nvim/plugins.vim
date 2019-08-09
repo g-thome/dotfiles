@@ -44,8 +44,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   
   "autocompletion and language server manager
-  Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-  
+  Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+
   "auto close html and xml tags
   Plug 'alvan/vim-closetag'
   
