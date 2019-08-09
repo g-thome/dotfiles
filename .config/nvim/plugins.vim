@@ -67,6 +67,9 @@ call plug#begin('~/.vim/plugged')
   "comment stuff out
   Plug 'tpope/vim-commentary'
 
+  "react props text objects(depends on textobj-user)
+  Plug 'justinj/vim-textobj-reactprop'
+
   "coc js/ts
   Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
@@ -78,6 +81,9 @@ call plug#begin('~/.vim/plugged')
 
   ""
   ""dependencies
+  "[textobj-reactprop] custom text objects
+  Plug 'kana/vim-textobj-user'
+
   "[fzf.vim] fuzzy executable
   Plug '/usr/local/opt/fzf'
 
