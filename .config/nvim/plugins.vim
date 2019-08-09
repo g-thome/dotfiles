@@ -58,14 +58,10 @@ call plug#begin('~/.vim/plugged')
   "sublime text multiple cursor feature
   Plug 'terryma/vim-multiple-cursors'
 
-  "misc (vim-notes dependency)
-  Plug 'xolox/vim-misc'
-
   "latex integration
   Plug 'lervag/vimtex'
 
   " fuzzy finder
-  Plug '/usr/local/opt/fzf'
   Plug 'junegunn/fzf.vim'
 
   "comment stuff out
@@ -80,4 +76,11 @@ call plug#begin('~/.vim/plugged')
   "coc json
   Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 
+  ""
+  ""dependencies
+  "[fzf.vim] fuzzy executable
+  Plug '/usr/local/opt/fzf'
+
+  "[notes] 
+  Plug 'xolox/vim-misc'
 call plug#end()
