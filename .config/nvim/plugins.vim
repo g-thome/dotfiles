@@ -71,4 +71,13 @@ call plug#begin('~/.vim/plugged')
   "comment stuff out
   Plug 'tpope/vim-commentary'
 
+  "coc js/ts
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+
+  "coc python
+  Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+
+  "coc json
+  Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+
 call plug#end()
