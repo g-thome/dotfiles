@@ -19,9 +19,6 @@ call plug#begin('~/.vim/plugged')
   "jsx syntax highlighting
   Plug 'mxw/vim-jsx'
   
-  "json syntax highlighting
-  Plug 'elzr/vim-json', { 'for': 'json'}
-  
   "emmet
   Plug 'mattn/emmet-vim', { 'for': 'html' }
   
@@ -47,8 +44,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   
   "autocompletion and language server manager
-  Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-  
+  Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+
   "auto close html and xml tags
   Plug 'alvan/vim-closetag'
   
@@ -61,17 +58,35 @@ call plug#begin('~/.vim/plugged')
   "sublime text multiple cursor feature
   Plug 'terryma/vim-multiple-cursors'
 
-  "misc (vim-notes dependency)
-  Plug 'xolox/vim-misc'
-
   "latex integration
   Plug 'lervag/vimtex'
 
   " fuzzy finder
-  Plug '/usr/local/opt/fzf'
   Plug 'junegunn/fzf.vim'
 
   "comment stuff out
   Plug 'tpope/vim-commentary'
 
+  "react props text objects(depends on textobj-user)
+  Plug 'justinj/vim-textobj-reactprop'
+
+  "coc js/ts
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+
+  "coc python
+  Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+
+  "coc json
+  Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+
+  ""
+  ""dependencies
+  "[textobj-reactprop] custom text objects
+  Plug 'kana/vim-textobj-user'
+
+  "[fzf.vim] fuzzy executable
+  Plug '/usr/local/opt/fzf'
+
+  "[notes] 
+  Plug 'xolox/vim-misc'
 call plug#end()
