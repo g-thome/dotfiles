@@ -41,7 +41,6 @@ bindsym $mod+Shift+Tab exec single_monitor
 ## sound-section  
 ################################################################################################
 
-exec --no-startup-id volumeicon
 exec --no-startup-id polybar -r main
 
 ################################################################################################
