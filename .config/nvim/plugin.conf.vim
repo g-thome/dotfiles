@@ -33,3 +33,7 @@ nmap ; :Buffers<CR>
 
 "vim-go
 let g:go_def_mapping_enabled = 0
+
+"vim-instant-markdown
+let g:instant_markdown_autostart = 1
+
