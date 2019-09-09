@@ -106,5 +106,3 @@ alias d="sudo docker"
 alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
 alias ytv="youtube-dl --add-metadata -f bestvideo+bestaudio/best -o '~/Videos/%(title)s.%(ext)s'"
 
-# wallpaper
-alias wall="xwallpaper --zoom"

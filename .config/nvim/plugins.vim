@@ -79,6 +79,9 @@ call plug#begin('~/.vim/plugged')
   "coc json
   Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 
+  "markdown previewer
+  Plug 'suan/vim-instant-markdown'
+
   ""
   ""dependencies
   "[textobj-reactprop] custom text objects
