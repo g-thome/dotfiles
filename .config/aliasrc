@@ -6,7 +6,7 @@ alias aliasnpm="alias | grep --color=never npm"
 alias aliaspacman="alias | grep --color=never pacman"
 alias aliasyay="alias | grep --color=never yay"
 alias aliasaur="aliasyay"
-alias aliassystemd="alias | grep --color=never systemd"
+alias aliassystemd="alias | grep --color=never systemctl"
 alias aliasdocker="alias | grep --color=never docker"
 alias aliasyoutubedl="alias | grep --color=never youtube"
 
