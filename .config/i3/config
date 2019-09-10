@@ -46,7 +46,6 @@ exec --no-startup-id polybar -r main
 ################################################################################################
 
 # Start Applications
-bindsym $mod+Shift+Return exec firefox
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym Print exec --no-startup-id i3-scrot -w
@@ -169,7 +168,6 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
 exec_always --no-startup-id sbxkb
 exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id firefox
 
 #############################
 ### settings for i3-gaps: ###
