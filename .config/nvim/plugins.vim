@@ -7,89 +7,95 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   echo "installing vim-plug"
   echo ""
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
 
-  "javascript syntac highlighting
-  Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-  
-  "jsx syntax highlighting
-  Plug 'mxw/vim-jsx'
-  
-  "emmet
-  Plug 'mattn/emmet-vim', { 'for': 'html' }
-  
-  "go
-  Plug 'fatih/vim-go'
-  
-  "colored color codes
-  Plug 'ap/vim-css-color'
-  
-  "scss syntax highlighting
-  Plug 'cakebaker/scss-syntax.vim'
-  
-  "css3 syntax highlighting
-  Plug 'hail2u/vim-css3-syntax'
-  
-  "i3wm syntax highlighting
-  Plug 'mboughaba/i3config.vim'
-  
-  "zen mode
-  Plug 'junegunn/goyo.vim'
-  
-  "insert and remove characters around text objects
-  Plug 'tpope/vim-surround'
-  
-  "autocompletion and language server manager
-  Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+"javascript syntac highlighting
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 
-  "auto close html and xml tags
-  Plug 'alvan/vim-closetag'
-  
-  "take notes
-  Plug 'xolox/vim-notes'
-  
-  "latex live preview
-  Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } 
-  
-  "sublime text multiple cursor feature
-  Plug 'terryma/vim-multiple-cursors'
+"jsx syntax highlighting
+Plug 'mxw/vim-jsx'
 
-  "latex integration
-  Plug 'lervag/vimtex'
+"emmet
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 
-  " fuzzy finder
-  Plug 'junegunn/fzf.vim'
+"go
+Plug 'fatih/vim-go'
 
-  "comment stuff out
-  Plug 'tpope/vim-commentary'
+"colored color codes
+Plug 'ap/vim-css-color'
 
-  "react props text objects(depends on textobj-user)
-  Plug 'justinj/vim-textobj-reactprop'
+"scss syntax highlighting
+Plug 'cakebaker/scss-syntax.vim'
 
-  "coc js/ts
-  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+"css3 syntax highlighting
+Plug 'hail2u/vim-css3-syntax'
 
-  "coc python
-  Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+"i3wm syntax highlighting
+Plug 'mboughaba/i3config.vim'
 
-  "coc json
-  Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+"zen mode
+Plug 'junegunn/goyo.vim'
 
-  "markdown previewer
-  Plug 'suan/vim-instant-markdown'
+"insert and remove characters around text objects
+Plug 'tpope/vim-surround'
 
-  ""
-  ""dependencies
-  "[textobj-reactprop] custom text objects
-  Plug 'kana/vim-textobj-user'
+"autocompletion and language server manager
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
-  "[fzf.vim] fuzzy executable
-  Plug '/usr/local/opt/fzf'
+"auto close html and xml tags
+Plug 'alvan/vim-closetag'
 
-  "[notes] 
-  Plug 'xolox/vim-misc'
+"auto pair
+Plug 'jiangmiao/auto-pairs'
+
+"take notes
+Plug 'xolox/vim-notes'
+
+"latex live preview
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } 
+
+"sublime text multiple cursor feature
+Plug 'terryma/vim-multiple-cursors'
+
+"latex integration
+Plug 'lervag/vimtex'
+
+" fuzzy finder
+Plug 'junegunn/fzf.vim'
+
+"comment stuff out
+Plug 'tpope/vim-commentary'
+
+"react props text objects(depends on textobj-user)
+Plug 'justinj/vim-textobj-reactprop'
+
+"coc js/ts
+Plug 'neoclide/coc-tsserver', {'do': 'npm install'}
+
+"coc python
+Plug 'neoclide/coc-python', {'do': 'npm install'}
+
+"coc json
+Plug 'neoclide/coc-json', {'do': 'npm install'}
+
+"markdown previewer
+Plug 'suan/vim-instant-markdown'
+
+"javascript import size
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
+
+""
+""dependencies
+"[textobj-reactprop] custom text objects
+Plug 'kana/vim-textobj-user'
+
+"[fzf.vim] fuzzy executable
+Plug '/usr/local/opt/fzf'
+
+"[notes] 
+Plug 'xolox/vim-misc'
 call plug#end()
