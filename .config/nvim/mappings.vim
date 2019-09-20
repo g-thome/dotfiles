@@ -1,6 +1,3 @@
-" ` character acessible through ,
-let g:mapleader=','
-
 " copy to system clipboard
 vnoremap <C-c> "+y
 
