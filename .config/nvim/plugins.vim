@@ -88,6 +88,9 @@ Plug 'suan/vim-instant-markdown'
 "javascript import size
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 
+"git
+Plug 'tpope/vim-fugitive'
+
 ""
 ""dependencies
 "[textobj-reactprop] custom text objects
