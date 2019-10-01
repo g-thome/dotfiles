@@ -73,6 +73,9 @@ Plug 'neoclide/coc-python', {'do': 'npm install'}
 "coc json
 Plug 'neoclide/coc-json', {'do': 'npm install'}
 
+"coc css
+Plug 'neoclide/coc-css', {'do': 'npm install'}
+
 "coc viml
 Plug 'iamcco/coc-vimlsp', {'do': 'npm install'}
 
