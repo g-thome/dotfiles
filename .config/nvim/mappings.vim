@@ -13,3 +13,6 @@ nnoremap <C-K> <C-W><C-K>
 " quit
 noremap <silent> <C-Q> :q!<CR>
 inoremap <silent> <C-Q> <C-O>:q!<CR>
+
+"insert at the end of line in insert mode
+inoremap <C-A> <C-O>A

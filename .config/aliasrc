@@ -20,11 +20,9 @@ alias ls="ls --color=auto"
 alias la="ls -a"
 alias ll="ls -la"
 
-# grep
-alias grep="grep --color=auto"
-alias egrep="egrep --auto=color"
-alias fgrep="fgrep --auto=color"
-alias ccat="highlight --out-format=ansi"
+# ripgrep
+alias rg="rg --color=auto"
+alias grep="rg --color=auto"
 
 # nvim
 alias e="nvim"

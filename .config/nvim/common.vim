@@ -36,5 +36,5 @@ set undofile
 
 augroup autoindent
   au!
-  autocmd BufWritePre * :normal migg=G`i
+  autocmd BufWritePre * :call CocAction('format')
 augroup End
