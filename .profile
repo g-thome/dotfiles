@@ -2,7 +2,7 @@
 
 export PATH="$PATH:$(find /home/gabriel/scripts -type d -printf ":%p"):$HOME/go/bin"
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export TERMINAL="xst"
+export TERMINAL="kitty"
 export VISUAL="nvim"
 export EDITOR="nvim"
 export READER="zathura"
