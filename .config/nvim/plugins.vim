@@ -82,6 +82,12 @@ Plug 'neoclide/coc-python', {'do': 'npm install'}
 "coc json
 Plug 'neoclide/coc-json', {'do': 'npm install'}
 
+"coc html
+Plug 'neoclide/coc-html', { 'do': 'npm install' }
+
+"handlebars
+Plug 'mustache/vim-mustache-handlebars'
+
 "markdown previewer
 Plug 'suan/vim-instant-markdown'
 
