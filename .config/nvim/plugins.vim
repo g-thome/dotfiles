@@ -79,6 +79,9 @@ Plug 'neoclide/coc-css', {'do': 'npm install'}
 "coc viml
 Plug 'iamcco/coc-vimlsp', {'do': 'npm install'}
 
+"coc yaml
+Plug 'neoclide/coc-yaml', {'do': 'npm install'}
+
 "markdown previewer
 Plug 'suan/vim-instant-markdown'
 
