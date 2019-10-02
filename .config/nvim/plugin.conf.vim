@@ -62,3 +62,5 @@ let g:go_def_mapping_enabled = 0
 "vim-instant-markdown
 let g:instant_markdown_autostart = 1
 
+"vim-closetag
+let g:closetag_filenames = '*.html,*.xhtml,*.hbs'
