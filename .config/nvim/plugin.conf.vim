@@ -37,6 +37,12 @@ nmap <silent> gr <Plug>(coc-references)
 "variable renaming
 nmap <leader>rn <Plug>(coc-rename)
 
+"functions as text objects
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
+
 "FZF
 "open a new file
 nmap <leader>t :FZF<CR>
