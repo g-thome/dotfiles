@@ -28,6 +28,13 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 "<cr> to confirm completion
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "<C-g>u\<CR>"
 
+"gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+"FZF
 "open a new file
 nmap <leader>t :FZF<CR>
 
