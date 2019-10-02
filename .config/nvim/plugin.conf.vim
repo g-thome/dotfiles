@@ -43,6 +43,12 @@ xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
+"formating
+command! -nargs=0 Format :call CocAction('format')
+
+" don't give |ins-completion-menu| messages
+set shortmess+=c
+
 "FZF
 "open a new file
 nmap <leader>t :FZF<CR>
