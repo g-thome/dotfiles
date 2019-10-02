@@ -25,6 +25,9 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+"<cr> to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "<C-g>u\<CR>"
+
 "open a new file
 nmap <leader>t :FZF<CR>
 
