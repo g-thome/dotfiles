@@ -97,6 +97,12 @@ Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 "git
 Plug 'tpope/vim-fugitive'
 
+"status bar
+Plug 'itchyny/lightline.vim'
+
+"buffers on status bar
+Plug 'bling/vim-bufferline'
+
 ""
 ""dependencies
 "[textobj-reactprop] custom text objects

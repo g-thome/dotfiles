@@ -34,7 +34,9 @@ endif
 set undodir=~/.config/nvim/undo-dir
 set undofile
 
+"format on save
 augroup autoindent
   au!
   autocmd BufWritePre * :call CocAction('format')
 augroup End
+
