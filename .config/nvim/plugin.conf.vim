@@ -64,3 +64,9 @@ let g:instant_markdown_autostart = 1
 
 "vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.hbs'
+
+"bufferline
+"don't show buffer number
+let g:bufferline_show_bufnr = 0
+
+
