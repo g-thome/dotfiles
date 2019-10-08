@@ -17,7 +17,10 @@ export NNN_OPS_PROG=1
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
 
+export FZF_DEFAULT_COMMAND='rg --files'
 
 . "/home/gabriel/.bashrc"
+
+xbindkeys 
 
 [ ! $DISPLAY ] && [ $XDG_VTNR -eq 1 ] && exec startx
