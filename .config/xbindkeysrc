@@ -35,10 +35,32 @@
 
 
 
-#emoji selector
-"rofi -show emoji -modi emoji"
-    m:0x40 + c:26
-    Mod4 + e 
+# emoji selector
+"rofimoji"
+  Mod4 + e 
 
-#
+# application launcher
+"rofi -show run"
+  Mod4 + d
+
+# lock screen
+"betterlockscreen -l"
+  Mod4 + control + q
+
+# two head setup
+"dual_monitor"
+  Mod4 + Tab
+
+# single head setup
+"single_monitor"
+  Mod4 + Shift + Tab
+
+# launch terminal
+"kitty"
+  Mod4 + Return
+
+# reset compton
+"pkill compton && compton -b"
+  Mod4 + control + t
+
 # End of xbindkeys configuration
