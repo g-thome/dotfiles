@@ -63,4 +63,12 @@
 "pkill compton && compton -b"
   Mod4 + control + t
 
+# screenshot
+"shot"
+  Mod4 + p
+
+# selection screenshot 
+"shot -s"
+  Mod4 + Tab + p
+
 # End of xbindkeys configuration

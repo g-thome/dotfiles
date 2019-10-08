@@ -38,9 +38,6 @@ exec --no-startup-id polybar -r main
 # Start Applications
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym Print exec --no-startup-id i3-scrot -w
-bindsym $mod+p --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+p --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # change focus

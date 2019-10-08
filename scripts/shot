@@ -1,0 +1,29 @@
+#!/bin/sh
+
+DIR=~/Pictures/Screenshots
+
+if [ "$1" = "-s" ]
+then
+  img=$(maim -s -b 10000 -r blur1,blur2 -f png | base64)
+else
+  img=$(maim -f png | base64)
+fi
+
+
+FILEEXISTS=true
+
+while [ "$FILEEXISTS" = "true" ] 
+do
+  FILENAME="$(rofi -dmenu -l 0 -p "ENTER FILENAME")"
+  if [ -f "$DIR/$FILENAME.png" ]
+  then
+    rofi -e "file already exists"
+  elif [ "$FILENAME" = "cancel" ]
+  then
+    exit
+  else
+    FILEEXISTS=false
+  fi
+done
+
+echo "$img" | base64 --decode > "$DIR/$FILENAME.png"
