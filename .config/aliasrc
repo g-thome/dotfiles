@@ -66,6 +66,7 @@ alias gpl="git pull"
 alias gre="git remote"
 alias glg="git log"
 alias gck="git checkout"
+alias gb="git branch"
 alias gbls="git branch -a"
 alias gad="git add"
 alias gdf="git diff"
@@ -75,6 +76,7 @@ alias grtl="git reset --soft HEAD~1"
 alias gmr="git merge"
 alias gtg="git tag"
 alias gfc="git fetch"
+alias grb="git rebase"
 
 # yadm
 alias y="yadm"
@@ -89,6 +91,7 @@ alias yad="yadm add"
 alias ydf="yadm diff"
 alias yrt="yadm reset"
 alias yrtl="yadm reset --soft HEAD~1"
+alias yrb="yadm rebase"
 
 # systemd
 alias s="sudo systemctl"
