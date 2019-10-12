@@ -9,7 +9,7 @@
 # allows ctrl-s as save command for vim
 stty -ixon
 
-export PS1="[\u@\w]\[\e[32m\]\`parse_git_branch\`\[\e[m\] "
+export PS1=" \[\e[m\] \W \[\e[35m\]\`parse_git_branch\`\[\e[m\] "
 
 use_color=true
 
