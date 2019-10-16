@@ -113,4 +113,7 @@ Plug '/usr/local/opt/fzf'
 
 "[notes] 
 Plug 'xolox/vim-misc'
+
+"[unix commands]
+Plug 'tpope/vim-eunuch'
 call plug#end()
