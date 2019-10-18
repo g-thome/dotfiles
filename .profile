@@ -21,6 +21,4 @@ export FZF_DEFAULT_COMMAND='rg --files'
 
 . "/home/gabriel/.bashrc"
 
-xbindkeys 
-
 [ ! $DISPLAY ] && [ $XDG_VTNR -eq 1 ] && exec startx
