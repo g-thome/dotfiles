@@ -35,5 +35,6 @@
     }
   },
   "javascript.referencesCodeLens.enable": false,
-  "javascript.implementationsCodeLens.enable": false
+  "javascript.implementationsCodeLens.enable": false,
+  "javascript.suggestionActions.enabled": false
 }
