@@ -65,8 +65,23 @@ let g:instant_markdown_autostart = 1
 "vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.hbs'
 
-"bufferline
-"don't show buffer number
-let g:bufferline_show_bufnr = 0
+"airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'monokai_subtle'
+let g:airline_section_x = ''
+let g:airline_section_y = ''
+let g:airline_section_z = ''
 
-
+let g:airline_mode_map = {
+\ '__' : '-',
+\ 'n'  : 'N',
+\ 'i'  : 'I',
+\ 'R'  : 'R',
+\ 'c'  : 'C',
+\ 'v'  : 'V',
+\ 'V'  : 'V',
+\ '^V' : 'V',
+\ 's'  : 'S',
+\ 'S'  : 'S',
+\ '^S' : 'S',
+\ }

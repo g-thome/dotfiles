@@ -98,10 +98,8 @@ Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 Plug 'tpope/vim-fugitive'
 
 "status bar
-Plug 'itchyny/lightline.vim'
-
-"buffers on status bar
-Plug 'bling/vim-bufferline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 ""
 ""dependencies
@@ -110,6 +108,9 @@ Plug 'kana/vim-textobj-user'
 
 "[fzf.vim] fuzzy executable
 Plug '/usr/local/opt/fzf'
+
+"colorscheme pack
+Plug 'flazz/vim-colorschemes'
 
 "[notes] 
 Plug 'xolox/vim-misc'
