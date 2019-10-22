@@ -33,6 +33,7 @@ alias vim="nvim"
 alias ni="npm install"
 alias nst="npm start"
 alias nrn="npm run"
+alias nls="npm ls --depth 0"
 
 # pacman
 alias pacman="pacman --color auto"
