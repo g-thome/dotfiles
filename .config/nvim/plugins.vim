@@ -13,7 +13,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-"jsx syntax highlighting
+"js syntax highlighting
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
 "emmet
