@@ -38,4 +38,7 @@ eval "$(nodenv init -)"
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
+# vi mode
+set -o vi
+
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc" 
