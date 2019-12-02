@@ -56,9 +56,6 @@ Plug 'terryma/vim-multiple-cursors'
 "latex integration
 Plug 'lervag/vimtex'
 
-" fuzzy finder
-Plug 'junegunn/fzf.vim'
-
 "comment stuff out
 Plug 'tpope/vim-commentary'
 
@@ -102,13 +99,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" interactive popup
+Plug 'liuchengxu/vim-clap'
+
 ""
 ""dependencies
 "[textobj-reactprop] custom text objects
 Plug 'kana/vim-textobj-user'
-
-"[fzf.vim] fuzzy executable
-Plug '/usr/local/opt/fzf'
 
 "colorscheme pack
 Plug 'flazz/vim-colorschemes'

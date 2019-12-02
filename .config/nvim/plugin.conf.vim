@@ -51,10 +51,10 @@ set shortmess+=c
 
 "FZF
 "open a new file
-nmap <leader>t :FZF<CR>
+nmap <leader>t :Clap files<CR>
 
 "show open buffers
-nmap ; :Buffers<CR>
+nmap ; :Clap buffers<CR>
 
 "vim-go
 let g:go_def_mapping_enabled = 0
