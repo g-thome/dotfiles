@@ -41,4 +41,7 @@ shopt -s histappend
 # vi mode
 set -o vi
 
+# prompt
+eval "$(starship init bash)"
+
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc" 
