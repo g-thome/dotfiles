@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$PATH:$(find /home/gabriel/scripts -type d -printf ":%p"):$HOME/go/bin"
+export PATH="$PATH:$(find ~/scripts -type d -printf ":%p"):$HOME/go/bin"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL="kitty"
 export VISUAL="nvim"
@@ -19,6 +19,6 @@ export GOBIN="$HOME/go/bin"
 
 export FZF_DEFAULT_COMMAND='rg --files'
 
-. "/home/gabriel/.bashrc"
+. "~/.bashrc"
 
 [ ! $DISPLAY ] && [ $XDG_VTNR -eq 1 ] && exec startx
