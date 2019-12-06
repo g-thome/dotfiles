@@ -36,3 +36,5 @@ shopt -s histappend
 eval "$(starship init bash)"
 
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc" 
+
+eval "$(thefuck --alias)"
