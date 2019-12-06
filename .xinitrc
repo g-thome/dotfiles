@@ -25,9 +25,6 @@ xbindkeys -f ~/.config/xbindkeysrc
 # notifications manager
 dunst > /dev/null 2>&1 &
 
-# wallpaper
-xwallpaper --zoom Pictures/Wallpapers/L_samurai_japan_flag.jpg
-
 # window manager
 exec i3
 
