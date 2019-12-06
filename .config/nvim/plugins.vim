@@ -14,14 +14,14 @@ endif
 call plug#begin('~/.vim/plugged')
 
 "js syntax highlighting
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript', {'for': 'js'}
+Plug 'mxw/vim-jsx', {'for': 'js'}
 
 "emmet
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 "go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', {'for': 'go'}
 
 "colored color codes
 Plug 'ap/vim-css-color'
@@ -54,7 +54,7 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'terryma/vim-multiple-cursors'
 
 "latex integration
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', {'for': 'tex'}
 
 " fuzzy finder
 Plug 'junegunn/fzf.vim'
@@ -63,7 +63,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 
 "react props text objects(depends on textobj-user)
-Plug 'justinj/vim-textobj-reactprop'
+Plug 'justinj/vim-textobj-reactprop', {'for': 'js'}
 
 "coc js/ts
 Plug 'neoclide/coc-tsserver', {'do': 'npm install'}
@@ -81,16 +81,16 @@ Plug 'neoclide/coc-html', { 'do': 'npm install' }
 Plug 'mustache/vim-mustache-handlebars'
  
 "coc css
-Plug 'neoclide/coc-css', {'do': 'npm install'}
+Plug 'neoclide/coc-css', {'do': 'npm install', 'for': ['css', 'scss']}
 
 "coc viml
 Plug 'iamcco/coc-vimlsp', {'do': 'npm install'}
 
 "coc yaml
-Plug 'neoclide/coc-yaml', {'do': 'npm install'}
+Plug 'neoclide/coc-yaml', {'do': 'npm install', 'for': 'yaml'}
 
 "markdown previewer
-Plug 'suan/vim-instant-markdown'
+Plug 'suan/vim-instant-markdown', {'for': 'md'}
 
 "javascript import size
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
@@ -102,6 +102,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+"[unix commands]
+Plug 'tpope/vim-eunuch'
 ""
 ""dependencies
 "[textobj-reactprop] custom text objects
@@ -116,6 +118,4 @@ Plug 'flazz/vim-colorschemes'
 "[notes] 
 Plug 'xolox/vim-misc'
 
-"[unix commands]
-Plug 'tpope/vim-eunuch'
 call plug#end()
