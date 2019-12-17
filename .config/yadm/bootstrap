@@ -1,0 +1,41 @@
+#!/bin/bash
+
+fonts="
+   adobe-source-code-pro-fonts 
+   cantarell-fonts 
+   noto-fonts
+   noto-fonts-extra
+   noto-fonts-emoji
+   ttf-roboto
+   ttf-roboto-mono
+   ttf-cascadia-code
+   ttf-fantasque-sans-mono
+   ttf-junicode
+   ttf-dejavu
+   ttf-ubuntu-font-family
+   ttf-fira-code
+   ttf-inconsolata
+   ttf-font-awesome
+"
+
+fonts_aur="
+  ttf-amiri
+  ttf-sil-lateef
+  ttf-sil-scheherazade
+  behdad-fonts
+  vazir-fonts
+  samim-fonts
+  parastoo-fonts
+  sahel-fonts
+  shahab-fonts
+  ttf-sazanami
+  ttf-hanazono
+  ttf-poppins
+  ttf-nanum
+"
+
+echo "installing fonts"
+sudo pacman -S --noconfirm $fonts > /dev/null 2>&1
+yay -S --noconfirm $fonts_aur > /dev/null 2>&1
+
+echo "done!"
