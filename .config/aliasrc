@@ -31,6 +31,8 @@ alias vim="nvim"
 
 # npm
 alias ni="npm install"
+alias nid="npm install -D"
+alias nig="npm install -g"
 alias nst="npm start"
 alias nrn="npm run"
 alias nls="npm ls --depth 0"
