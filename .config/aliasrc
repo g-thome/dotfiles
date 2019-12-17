@@ -54,7 +54,7 @@ alias pqs="pacman -Qs"
 alias pr="sudo pacman -Rns"
 
 #aur
-alias yay="yay --color=auto"
+alias yay="yay --aur --color=auto"
 alias a="yay --noconfirm" 
 alias au="yay -Syu"
 alias ass="yay -Ss"
