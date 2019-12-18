@@ -99,6 +99,7 @@ for_window [title="pulsemixer"] floating enable border pixel 1
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="pavucontrol"] floating enable sticky enable border normal
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
