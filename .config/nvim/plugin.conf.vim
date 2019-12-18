@@ -38,6 +38,7 @@ let g:airline_mode_map = {
 \ '^S' : 'S',
 \ }
 
+"languageClient
 let g:LanguageClient_serverCommands = {
   \ 'javascript': ['typescript-language-server', '--stdio'],
   \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
@@ -47,3 +48,10 @@ let g:LanguageClient_serverCommands = {
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <leader>rn :call LanguageClient#textDocument_rename()<CR>
+
+"deoplete
+let g:deoplete#enable_at_startup = 1
+
+call deoplete#custom#source('LanguageClient',
+  \ 'min_pattern_length',
+  \ 2)

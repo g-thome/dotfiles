@@ -60,10 +60,6 @@ Plug 'tpope/vim-commentary'
 "react props text objects(depends on textobj-user)
 Plug 'justinj/vim-textobj-reactprop', {'for': 'js'}
 
-
-
-
-
 "handlebars
 Plug 'mustache/vim-mustache-handlebars'
  
@@ -72,6 +68,9 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
+
+"completion engine
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 "markdown previewer
 Plug 'suan/vim-instant-markdown', {'for': 'md'}
