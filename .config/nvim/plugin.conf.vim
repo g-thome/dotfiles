@@ -39,8 +39,8 @@ let g:airline_mode_map = {
 \ }
 
 let g:LanguageClient_serverCommands = {
-  \ 'javascript': ['/usr/bin/javascript-typescript-langserver'],
-  \ 'javascript.jsx': ['/usr/bin/javascript-typescript-langserver'],
+  \ 'javascript': ['typescript-language-server', '--stdio'],
+  \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
   \ 'sh': ['bash-language-server', 'start'],
   \ }
 
