@@ -35,8 +35,6 @@ Plug 'junegunn/goyo.vim'
 "insert and remove characters around text objects
 Plug 'tpope/vim-surround'
 
-"autocompletion and language server manager
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
 "auto close html and xml tags
 Plug 'alvan/vim-closetag'
@@ -62,29 +60,18 @@ Plug 'tpope/vim-commentary'
 "react props text objects(depends on textobj-user)
 Plug 'justinj/vim-textobj-reactprop', {'for': 'js'}
 
-"coc js/ts
-Plug 'neoclide/coc-tsserver', {'do': 'npm install'}
 
-"coc python
-Plug 'neoclide/coc-python', {'do': 'npm install'}
 
-"coc json
-Plug 'neoclide/coc-json', {'do': 'npm install'}
 
-"coc html
-Plug 'neoclide/coc-html', { 'do': 'npm install' }
 
 "handlebars
 Plug 'mustache/vim-mustache-handlebars'
  
-"coc css
-Plug 'neoclide/coc-css', {'do': 'npm install', 'for': ['css', 'scss']}
-
-"coc viml
-Plug 'iamcco/coc-vimlsp', {'do': 'npm install'}
-
-"coc yaml
-Plug 'neoclide/coc-yaml', {'do': 'npm install', 'for': 'yaml'}
+"language client
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 "markdown previewer
 Plug 'suan/vim-instant-markdown', {'for': 'md'}
