@@ -135,15 +135,3 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
 exec_always --no-startup-id sbxkb
 exec_always --no-startup-id ff-theme-util
-
-#############################
-### settings for i3-gaps: ###
-#############################
-
-# Set inner/outer gaps
-gaps inner 14
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
-
