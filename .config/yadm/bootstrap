@@ -61,4 +61,21 @@ nodenv install 8.0.0
 nodenv install 10.1.0
 nodenv install 12.4.0
 
+echo "configurando o editor"
+sudo pacman -S --noconfirm neovim > /dev/null 2>&1
+
+pyenv virtualenv 2.7.15 nvim_2
+pyenv virtualenv 3.7.1 nvim_3
+
+~/.pyenv/versions/nvim_2/bin/pip2 install pynvim
+~/.pyenv/versions/nvim_3/bin/pip3 install pynvim
+
+~/.nodenv/versions/10.1.0/bin/npm install neovim vim-language-server bash-language-server 
+
+sudo pacman -S --noconfirm typescript-language-server
+
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+nvim --headless +PlugInstall +q +q > /dev/null 2>&1
+
 echo "pronto!"
