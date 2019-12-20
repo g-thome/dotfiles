@@ -1,6 +1,6 @@
 #!/bin/bash
 
-fonts="
+fontes="
    adobe-source-code-pro-fonts 
    cantarell-fonts 
    noto-fonts
@@ -18,7 +18,7 @@ fonts="
    ttf-font-awesome
 "
 
-fonts_aur="
+fontes_aur="
   ttf-amiri
   ttf-sil-lateef
   ttf-sil-scheherazade
@@ -34,8 +34,31 @@ fonts_aur="
   ttf-nanum
 "
 
-echo "installing fonts"
-sudo pacman -S --noconfirm $fonts > /dev/null 2>&1
-yay -S --noconfirm $fonts_aur > /dev/null 2>&1
+echo "instalando fontes"
+sudo pacman -S --noconfirm $fontes > /dev/null 2>&1
+yay -S --noconfirm $fontes_aur > /dev/null 2>&1
 
-echo "done!"
+linguagens="
+  rust
+  go
+"
+
+linguagens_aur="
+  nodenv
+  nodenv-node-build-git
+  pyenv
+  pyenv-virtualenv
+"
+
+echo "instalando e configurando linguagens"
+sudo pacman -S --noconfirm $linguagens > /dev/null 2>&1
+yay -S --noconfirm $linguagens_aur > /dev/null 2>&1
+
+pyenv install 2.7.15 
+pyenv install 3.7.1
+
+nodenv install 8.0.0
+nodenv install 10.1.0
+nodenv install 12.4.0
+
+echo "pronto!"
