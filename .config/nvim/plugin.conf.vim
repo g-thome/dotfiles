@@ -43,6 +43,8 @@ let g:LanguageClient_serverCommands = {
   \ 'javascript': ['typescript-language-server', '--stdio'],
   \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
   \ 'sh': ['bash-language-server', 'start'],
+  \ 'vim': ['vim-language-server', '--stdio'],
+  \ 'go': ['gopls']
   \ }
 
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
@@ -55,3 +57,5 @@ let g:deoplete#enable_at_startup = 1
 call deoplete#custom#source('LanguageClient',
   \ 'min_pattern_length',
   \ 2)
+
+inoremap <silent> <expr> <C-space> deoplete#manual_complete()
