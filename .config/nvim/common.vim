@@ -1,6 +1,6 @@
 " python
 let g:python_host_prog = '~/.pyenv/versions/nvim_2/bin/python'
-let g:python3_host_prog = '~/.pyenv/versions/nvim_3/bin/python'
+let g:python3_host_prog = expand('~/.pyenv/versions/nvim_3/bin/python')
 
 "node
 let g:node_host_prog = '~/.nodenv/versions/10.1.0/lib/node_modules/neovim/bin/cli.js'
