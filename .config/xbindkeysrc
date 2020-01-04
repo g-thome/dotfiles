@@ -69,6 +69,6 @@
 
 # selection screenshot 
 "shot -s"
-  Mod4 + Tab + p
+  Mod4 + s
 
 # End of xbindkeys configuration
