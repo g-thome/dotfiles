@@ -5,8 +5,12 @@
 # hold caps_lock -> super
 setxkbmap -option caps:super
 
+# keyboard layouts
+setxkbmap -model pc104 -layout us,us_intl,ir,ar grp:alt_shift_toggle
+
 # press caps_lock -> esc
 killall xcape 2>/dev/null; xcape -e 'Super_L=Escape'
+
 
 # keybindings
 xbindkeys -f ~/.config/xbindkeysrc
