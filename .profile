@@ -6,7 +6,6 @@ export TERMINAL="kitty"
 export VISUAL="nvim"
 export EDITOR="nvim"
 export READER="zathura"
-export FILE="nnn"
 export BROWSER="firefox"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
