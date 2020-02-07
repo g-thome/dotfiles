@@ -44,7 +44,8 @@ let g:LanguageClient_serverCommands = {
   \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
   \ 'sh': ['bash-language-server', 'start'],
   \ 'vim': ['vim-language-server', '--stdio'],
-  \ 'go': ['gopls']
+  \ 'go': ['gopls'],
+  \ 'css': ['~/.nodenv/versions/10.1.0/bin/css-languageserver', '--stdio']
   \ }
 
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
