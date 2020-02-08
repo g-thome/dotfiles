@@ -1,27 +1,14 @@
-"auto install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  if !executable("curl")
-    echoerr "couldn't install vim-plug: curl not found"
-    execute "q!"
-  endif
-  echo "installing vim-plug"
-  echo ""
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin('~/.vim/plugged')
 
 "js syntax highlighting
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript', {'for': 'js'}
+Plug 'mxw/vim-jsx', {'for': 'js'}
 
 "emmet
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 "go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', {'for': 'go'}
 
 "colored color codes
 Plug 'ap/vim-css-color'
@@ -35,8 +22,6 @@ Plug 'junegunn/goyo.vim'
 "insert and remove characters around text objects
 Plug 'tpope/vim-surround'
 
-"autocompletion and language server manager
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
 "auto close html and xml tags
 Plug 'alvan/vim-closetag'
@@ -54,40 +39,28 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'terryma/vim-multiple-cursors'
 
 "latex integration
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', {'for': 'tex'}
 
 "comment stuff out
 Plug 'tpope/vim-commentary'
 
 "react props text objects(depends on textobj-user)
-Plug 'justinj/vim-textobj-reactprop'
-
-"coc js/ts
-Plug 'neoclide/coc-tsserver', {'do': 'npm install'}
-
-"coc python
-Plug 'neoclide/coc-python', {'do': 'npm install'}
-
-"coc json
-Plug 'neoclide/coc-json', {'do': 'npm install'}
-
-"coc html
-Plug 'neoclide/coc-html', { 'do': 'npm install' }
+Plug 'justinj/vim-textobj-reactprop', {'for': 'js'}
 
 "handlebars
 Plug 'mustache/vim-mustache-handlebars'
  
-"coc css
-Plug 'neoclide/coc-css', {'do': 'npm install'}
+"language client
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
-"coc viml
-Plug 'iamcco/coc-vimlsp', {'do': 'npm install'}
-
-"coc yaml
-Plug 'neoclide/coc-yaml', {'do': 'npm install'}
+"completion engine
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 "markdown previewer
-Plug 'suan/vim-instant-markdown'
+Plug 'suan/vim-instant-markdown', {'for': 'md'}
 
 "javascript import size
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
@@ -98,6 +71,9 @@ Plug 'tpope/vim-fugitive'
 "status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+"[unix commands]
+Plug 'tpope/vim-eunuch'
 
 " interactive popup
 Plug 'liuchengxu/vim-clap'
@@ -113,6 +89,4 @@ Plug 'flazz/vim-colorschemes'
 "[notes] 
 Plug 'xolox/vim-misc'
 
-"[unix commands]
-Plug 'tpope/vim-eunuch'
 call plug#end()

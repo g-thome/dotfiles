@@ -45,9 +45,9 @@ font-1 = "Font Awesome 5 Free:pixelsize=9:0"
 font-2 = "Font Awesome 5 Brands:pixelsize=9:0"
 font-4 = "Font Awesome 5 Free Solid:pixelsize=9:0"
 
-modules-left =  i3 mpd
+modules-left =  i3 
 modules-center = xwindow
-modules-right = xbacklight pulseaudio xkeyboard wlan eth battery time
+modules-right = xbacklight mpd pulseaudio xkeyboard wlan eth battery time
 
 tray-position = right
 tray-padding = 2
@@ -112,15 +112,9 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <label-song>  
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
+label-song-maxlen = 250
 label-song-ellipsis = true
 
 [module/xbacklight]

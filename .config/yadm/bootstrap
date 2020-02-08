@@ -1,0 +1,81 @@
+#!/bin/bash
+
+fontes="
+   adobe-source-code-pro-fonts 
+   cantarell-fonts 
+   noto-fonts
+   noto-fonts-extra
+   noto-fonts-emoji
+   ttf-roboto
+   ttf-roboto-mono
+   ttf-cascadia-code
+   ttf-fantasque-sans-mono
+   ttf-junicode
+   ttf-dejavu
+   ttf-ubuntu-font-family
+   ttf-fira-code
+   ttf-inconsolata
+   ttf-font-awesome
+"
+
+fontes_aur="
+  ttf-amiri
+  ttf-sil-lateef
+  ttf-sil-scheherazade
+  behdad-fonts
+  vazir-fonts
+  samim-fonts
+  parastoo-fonts
+  sahel-fonts
+  shahab-fonts
+  ttf-sazanami
+  ttf-hanazono
+  ttf-poppins
+  ttf-nanum
+"
+
+echo "instalando fontes"
+sudo pacman -S --noconfirm $fontes > /dev/null 2>&1
+yay -S --noconfirm $fontes_aur > /dev/null 2>&1
+
+linguagens="
+  rust
+  go
+"
+
+linguagens_aur="
+  nodenv
+  nodenv-node-build-git
+  pyenv
+  pyenv-virtualenv
+"
+
+echo "instalando e configurando linguagens"
+sudo pacman -S --noconfirm $linguagens > /dev/null 2>&1
+yay -S --noconfirm $linguagens_aur > /dev/null 2>&1
+
+pyenv install 2.7.15 
+pyenv install 3.7.1
+
+nodenv install 8.0.0
+nodenv install 10.1.0
+nodenv install 12.4.0
+
+echo "configurando o editor"
+sudo pacman -S --noconfirm neovim > /dev/null 2>&1
+
+pyenv virtualenv 2.7.15 nvim_2
+pyenv virtualenv 3.7.1 nvim_3
+
+~/.pyenv/versions/nvim_2/bin/pip2 install pynvim
+~/.pyenv/versions/nvim_3/bin/pip3 install pynvim
+
+~/.nodenv/versions/10.1.0/bin/npm install neovim vim-language-server bash-language-server 
+
+sudo pacman -S --noconfirm typescript-language-server
+
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+nvim --headless +PlugInstall +q +q > /dev/null 2>&1
+
+echo "pronto!"

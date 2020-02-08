@@ -2,28 +2,27 @@
 
 DIR=~/Pictures/Screenshots
 
-if [ "$1" = "-s" ]
+while getopts 's' opt; do
+  case "${opt}" in
+    s) selection=1 ;;
+  esac
+done
+
+if [ ${selection} ]
 then
   img=$(maim -s -b 10000 -r blur1,blur2 -f png | base64)
 else
   img=$(maim -f png | base64)
 fi
 
+filename="$(rofi -dmenu -l 0 -p "ENTER FILENAME")"
 
-FILEEXISTS=true
+if [ -z "$filename" ]
+then
+  exit
+elif [ -f "$DIR/$filename.png" ]
+then
+  filename="$filename-copy"
+fi
 
-while [ "$FILEEXISTS" = "true" ] 
-do
-  FILENAME="$(rofi -dmenu -l 0 -p "ENTER FILENAME")"
-  if [ -f "$DIR/$FILENAME.png" ]
-  then
-    rofi -e "file already exists"
-  elif [ "$FILENAME" = "cancel" ]
-  then
-    exit
-  else
-    FILEEXISTS=false
-  fi
-done
-
-echo "$img" | base64 --decode > "$DIR/$FILENAME.png"
+echo "$img" | base64 --decode > "$DIR/$filename.png"

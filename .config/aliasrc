@@ -31,6 +31,8 @@ alias vim="nvim"
 
 # npm
 alias ni="npm install"
+alias nid="npm install -D"
+alias nig="npm install -g"
 alias nst="npm start"
 alias nrn="npm run"
 alias nls="npm ls --depth 0"
@@ -52,7 +54,7 @@ alias pqs="pacman -Qs"
 alias pr="sudo pacman -Rns"
 
 #aur
-alias yay="yay --color=auto"
+alias yay="yay --aur --color=auto"
 alias a="yay --noconfirm" 
 alias au="yay -Syu"
 alias ass="yay -Ss"
@@ -105,6 +107,8 @@ alias se="sudo systemctl enable"
 alias d="sudo docker"
 
 #youtube-dl
-alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
+alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/Music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
 alias ytv="youtube-dl --add-metadata -f bestvideo+bestaudio/best -o '~/Videos/%(title)s.%(ext)s'"
 
+# mpv
+alias mpv="mpv --screenshot-directory ~/Pictures/Screenshots"
