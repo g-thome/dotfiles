@@ -1,10 +1,31 @@
 " copy to system clipboard
-vnoremap <C-c> "+y
+vmap <C-c> "+y
 
 " save file on <c-s>
-noremap <silent> <C-S>    :update<CR>
-vnoremap <silent> <C-S>   <C-C>:update<CR>
-inoremap <silent> <C-S>   <C-O>:update<CR>
+vmap <silent> <C-S>   <C-C>:update<CR>
+imap <silent> <C-S>   <C-O>:update<CR>
+
+" save on <s>
+nmap s :w<CR>
+
+" up and down
+nmap m <C-D>
+nmap , <C-U>
+
+"end of file
+nmap J G
+
+" end of line
+nmap L $
+
+" start of file
+nmap K gg
+
+" start of line
+nmap H 0
+
+" replace
+nmap c ciw
 
 " navigate splits smoothly
 nnoremap <C-J> <C-W><C-J>
@@ -13,8 +34,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " quit
-noremap <silent> <C-Q> :q!<CR>
-inoremap <silent> <C-Q> <C-O>:q!<CR>
+nmap q :bdelete<CR>
+nmap <silent> <C-Q> :q!<CR>
+imap <silent> <C-Q> <C-O>:q!<CR>
 
 "insert at the end of line in insert mode
-inoremap <C-A> <C-O>A
+imap <C-A> <C-O>A

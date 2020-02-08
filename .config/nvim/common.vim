@@ -37,4 +37,8 @@ endif
 set undodir=~/.config/nvim/undo-dir
 set undofile
 
+" highlight current line number
+highlight CursorLineNR cterm=bold
 
+" bold visual selection
+highlight Visual cterm=bold
