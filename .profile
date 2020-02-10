@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$PATH:$(find ~/scripts -type d -printf ":%p"):$HOME/go/bin"
+export PATH="$PATH:$(find ~/Scripts -type d -printf ":%p"):$HOME/go/bin"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL="kitty"
 export VISUAL="nvim"
