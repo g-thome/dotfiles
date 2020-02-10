@@ -19,7 +19,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.hbs'
 
 "airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'monokai_subtle'
+let g:airline_theme = 'deus'
 let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = ''
@@ -48,9 +48,11 @@ let g:LanguageClient_serverCommands = {
   \ 'css': ['~/.nodenv/versions/10.1.0/bin/css-languageserver', '--stdio']
   \ }
 
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> <leader>h :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <leader>rn :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent><leader>f :call LanguageClient#textDocument_formatting()<CR>
+nnoremap <leader>a :call LanguageClient#textDocument_codeAction()<CR>
 
 "deoplete
 let g:deoplete#enable_at_startup = 1
@@ -60,3 +62,4 @@ call deoplete#custom#source('LanguageClient',
   \ 2)
 
 inoremap <silent> <expr> <C-space> deoplete#manual_complete()
+
