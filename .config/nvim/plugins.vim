@@ -22,7 +22,6 @@ Plug 'junegunn/goyo.vim'
 "insert and remove characters around text objects
 Plug 'tpope/vim-surround'
 
-
 "auto close html and xml tags
 Plug 'alvan/vim-closetag'
 
@@ -88,5 +87,8 @@ Plug 'flazz/vim-colorschemes'
 
 "[notes] 
 Plug 'xolox/vim-misc'
+
+"[language client]
+Plug 'junegunn/fzf', { 'do': './install --bin' }
 
 call plug#end()
