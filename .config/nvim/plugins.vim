@@ -58,8 +58,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 "completion engine
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-"markdown previewer
-Plug 'suan/vim-instant-markdown', {'for': 'md'}
+"markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 "javascript import size
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
