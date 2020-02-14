@@ -1,12 +1,15 @@
 " don't give |ins-completion-menu| messages
 set shortmess+=c
 
-"FZF
+"clap
 "open a new file
 nmap <leader>t :Clap files<CR>
 
 "show open buffers
 nmap ; :Clap buffers<CR>
+
+"color scheme
+let g:clap_theme = 'material_design_dark'
 
 "vim-go
 let g:go_def_mapping_enabled = 0
