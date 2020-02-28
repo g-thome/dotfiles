@@ -1,31 +1,29 @@
-" copy to system clipboard
-vmap <C-c> "+y
-
-" save file on <c-s>
+" save 
+nmap s :w<CR>
 vmap <silent> <C-S>   <C-C>:update<CR>
 imap <silent> <C-S>   <C-O>:update<CR>
 
-" save on <s>
-nmap s :w<CR>
-
 " up and down
 nmap m <C-D>
+vmap m <C-D>
 nmap , <C-U>
+vmap , <C-U>
 
 "end of file
 nmap J G
+vmap J G
 
 " end of line
 nmap L $
+vmap L $
 
 " start of file
 nmap K gg
+vmap K gg
 
 " start of line
 nmap H 0
-
-" replace
-nmap c ciw
+vmap H 0
 
 " navigate splits smoothly
 nnoremap <C-J> <C-W><C-J>
