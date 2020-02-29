@@ -40,13 +40,13 @@ let g:airline_mode_map = {
 
 "languageClient
 let g:LanguageClient_serverCommands = {
-  \ 'javascript': ['typescript-language-server', '--stdio'],
-  \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
-  \ 'sh': ['bash-language-server', 'start'],
-  \ 'vim': ['vim-language-server', '--stdio'],
+  \ 'javascript': ['~/.nodenv/versions/10.1.0/bin/typescript-language-server', '--stdio'],
+  \ 'javascript.jsx': ['~/.nodenv/versions/10.1.0/bin/typescript-language-server', '--stdio'],
+  \ 'sh': ['~/.nodenv/versions/10.1.0/bin/bash-language-server', 'start'],
+  \ 'vim': ['~/.nodenv/versions/10.1.0/bin/vim-language-server', '--stdio'],
   \ 'go': ['gopls'],
   \ 'css': ['~/.nodenv/versions/10.1.0/bin/css-languageserver', '--stdio'],
-  \ 'html': ['html-languageserver', '--stdio']
+  \ 'html': ['~/.nodenv/versions/10.1.0/bin/html-languageserver', '--stdio']
   \ }
 
 nnoremap <silent> <leader>h :call LanguageClient#textDocument_hover()<CR>
