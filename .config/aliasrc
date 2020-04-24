@@ -30,6 +30,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 # npm
+alias nit="npm init -y"
 alias ni="npm install"
 alias nid="npm install -D"
 alias nig="npm install -g"
@@ -110,5 +111,3 @@ alias d="sudo docker"
 alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/Music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
 alias ytv="youtube-dl --add-metadata -f bestvideo+bestaudio/best -o '~/Videos/%(title)s.%(ext)s'"
 
-# mpv
-alias mpv="mpv --screenshot-directory ~/Pictures/Screenshots"

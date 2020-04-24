@@ -1,15 +1,9 @@
 " don't give |ins-completion-menu| messages
 set shortmess+=c
 
-"clap
-"open a new file
-nmap <leader>t :Clap files<CR>
-
-"show open buffers
-nmap ; :Clap buffers<CR>
-
-"color scheme
-let g:clap_theme = 'material_design_dark'
+" NERDTree
+nmap ; :NERDTreeToggle<CR>
+inoremap <C-t> :NERDTreeToggle<CR>
 
 "vim-go
 let g:go_def_mapping_enabled = 0
@@ -19,7 +13,14 @@ let g:closetag_filenames = '*.html,*.xhtml,*.hbs'
 
 "airline
 let g:airline#extensions#tabline#enabled = 1
+
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
 let g:airline_theme = 'deus'
+
+let g:airline_section_A = ''
+let g:airline_section_B = ''
+let g:airline_section_C = ''
 let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = ''
@@ -38,29 +39,46 @@ let g:airline_mode_map = {
 \ '^S' : 'S',
 \ }
 
-"languageClient
-let g:LanguageClient_serverCommands = {
-  \ 'javascript': ['~/.nodenv/versions/10.1.0/bin/typescript-language-server', '--stdio'],
-  \ 'javascript.jsx': ['~/.nodenv/versions/10.1.0/bin/typescript-language-server', '--stdio'],
-  \ 'sh': ['~/.nodenv/versions/10.1.0/bin/bash-language-server', 'start'],
-  \ 'vim': ['~/.nodenv/versions/10.1.0/bin/vim-language-server', '--stdio'],
-  \ 'go': ['gopls'],
-  \ 'css': ['~/.nodenv/versions/10.1.0/bin/css-languageserver', '--stdio'],
-  \ 'html': ['~/.nodenv/versions/10.1.0/bin/html-languageserver', '--stdio']
-  \ }
+"coc
+inoremap <silent><expr> <c-space> coc#refresh()
 
-nnoremap <silent> <leader>h :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <leader>rn :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent><leader>f :call LanguageClient#textDocument_formatting()<CR>
-nnoremap <leader>a :call LanguageClient#textDocument_codeAction()<CR>
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-"deoplete
-let g:deoplete#enable_at_startup = 1
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
-call deoplete#custom#source('LanguageClient',
-  \ 'min_pattern_length',
-  \ 2)
+inoremap <silent><expr> <c-space> coc#refresh()
 
-inoremap <silent> <expr> <C-space> deoplete#manual_complete()
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> ? :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+nmap R <Plug>(coc-rename)
+
+xmap <space> <Plug>(coc-codeaction)
+nmap <space> <Plug>(coc-codeaction)
+
+nmap f <Plug>(coc-format)

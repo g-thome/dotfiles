@@ -117,7 +117,6 @@ bindsym $mod+Mod1+k exec --no-startup-id i3resize up
 bindsym $mod+Mod1+l exec --no-startup-id i3resize right
 
 # Autostart applications
-exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
 exec_always --no-startup-id sbxkb

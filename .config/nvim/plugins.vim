@@ -7,9 +7,6 @@ Plug 'mxw/vim-jsx', {'for': 'js'}
 "emmet
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
-"go
-Plug 'fatih/vim-go', {'for': 'go'}
-
 "colored color codes
 Plug 'ap/vim-css-color'
 
@@ -50,13 +47,12 @@ Plug 'justinj/vim-textobj-reactprop', {'for': 'js'}
 Plug 'mustache/vim-mustache-handlebars'
  
 "language client
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
 
-"completion engine
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"disables search highlighting
+Plug 'romainl/vim-cool'
 
 "markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -71,11 +67,17 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+"analytics
+Plug 'wakatime/vim-wakatime'
+
 "[unix commands]
 Plug 'tpope/vim-eunuch'
 
 " interactive popup
 Plug 'liuchengxu/vim-clap'
+
+" project structure
+Plug 'preservim/nerdtree'
 
 ""
 ""dependencies

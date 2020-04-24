@@ -20,6 +20,10 @@ xbindkeys -f ~/.config/xbindkeysrc
 # notifications manager
 dunst > /dev/null 2>&1 &
 
+nm-applet &
+
+polybar &
+
 # necessário para usar o mailspring
 dbus-update-activation-environment --systemd DISPLAY
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
