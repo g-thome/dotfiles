@@ -79,6 +79,9 @@ Plug 'liuchengxu/vim-clap'
 " project structure
 Plug 'preservim/nerdtree'
 
+" svelte syntax highlighting
+Plug 'evanleck/vim-svelte'
+
 ""
 ""dependencies
 "[textobj-reactprop] custom text objects
@@ -274,9 +277,6 @@ imap <silent> <C-Q> <C-O>:q!<CR>
 
 "insert at the end of line in insert mode
 imap <C-A> <C-O>A
-
-"delete
-nnoremap d dw
 
 "object-verb order
 nnoremap "d di"
