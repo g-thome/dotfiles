@@ -14,6 +14,10 @@ export GOBIN="$HOME/go/bin"
 
 export FZF_DEFAULT_COMMAND='rg --files'
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 . "~/.bashrc"
 
 [ ! $DISPLAY ] && [ $XDG_VTNR -eq 1 ] && exec startx

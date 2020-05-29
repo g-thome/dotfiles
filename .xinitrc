@@ -6,7 +6,7 @@
 setxkbmap -option caps:super
 
 # keyboard layouts
-setxkbmap -model pc104 -layout us,us_intl,ir,ar grp:alt_shift_toggle
+# setxkbmap -model pc104 -layout us,us_intl,ir,jp grp:alt_shift_toggle
 
 # press caps_lock -> esc
 killall xcape 2>/dev/null; xcape -e 'Super_L=Escape'
@@ -16,6 +16,8 @@ picom -b
 
 # keybindings
 xbindkeys -f ~/.config/xbindkeysrc
+
+fcitx -d
 
 # notifications manager
 dunst > /dev/null 2>&1 &
