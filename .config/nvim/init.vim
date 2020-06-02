@@ -70,6 +70,7 @@ Plug 'vim-airline/vim-airline-themes'
 "analytics
 Plug 'wakatime/vim-wakatime'
 
+
 "[unix commands]
 Plug 'tpope/vim-eunuch'
 
@@ -230,9 +231,10 @@ nmap <space> <Plug>(coc-codeaction)
 nmap f <Plug>(coc-format)
 
 "colorscheme
-colorscheme dracula
+set t_Co=256
+colorscheme gruvbox
 
-
+"disables automatic comment character insertion
 au FileType * set fo-=c fo-=r fo-=o
 
 
