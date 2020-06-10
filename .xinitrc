@@ -24,13 +24,11 @@ dunst > /dev/null 2>&1 &
 
 nm-applet &
 
-polybar &
-
 # necessário para usar o mailspring
 dbus-update-activation-environment --systemd DISPLAY
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 # window manager
-exec i3
+exec dwm
 
