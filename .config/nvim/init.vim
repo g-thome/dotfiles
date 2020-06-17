@@ -146,7 +146,6 @@ highlight CursorLineNR cterm=bold
 " bold visual selection
 highlight Visual cterm=bold
 
-
 " don't give |ins-completion-menu| messages
 set shortmess+=c
 
@@ -158,7 +157,7 @@ inoremap <C-t> :NERDTreeToggle<CR>
 let g:go_def_mapping_enabled = 0
 
 "vim-closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.hbs'
+let g:closetag_filenames = '*.html,*.xhtml,*.hbs,*.svelte'
 
 "airline
 let g:airline#extensions#tabline#enabled = 1
@@ -268,16 +267,21 @@ nmap H 0
 vmap H 0
 
 " navigate splits smoothly
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J>   <C-W><C-J>
+nnoremap <C-K>   <C-W><C-K>
+nnoremap <C-L>   <C-W><C-L>
+nnoremap <C-H>   <C-W><C-H>
+nnoremap <Down>  <C-W><C-J>
+nnoremap <Up>    <C-W><C-K>
+nnoremap <Right> <C-W><C-L>
+nnoremap <Left>  <C-W><C-H>
 
 " quit
 nmap q :bdelete<CR>
 nmap Q :q!<CR>
 nmap <silent> <C-Q> :q!<CR>
 imap <silent> <C-Q> <C-O>:q!<CR>
+tnoremap <Esc> <C-\><C-n>:q!<CR>
 
 "insert at the end of line in insert mode
 imap <C-A> <C-O>A
