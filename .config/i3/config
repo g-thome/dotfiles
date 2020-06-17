@@ -101,6 +101,9 @@ for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="pavucontrol"] floating enable sticky enable border normal
 
+# remove borders from the terminal
+for_window [class="kitty"] border pixel 0
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 

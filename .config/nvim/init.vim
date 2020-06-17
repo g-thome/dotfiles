@@ -70,6 +70,8 @@ Plug 'vim-airline/vim-airline-themes'
 "analytics
 Plug 'wakatime/vim-wakatime'
 
+"css sytnax highlighting
+Plug 'hail2u/vim-css3-syntax'
 
 "[unix commands]
 Plug 'tpope/vim-eunuch'
@@ -92,8 +94,8 @@ Plug 'junegunn/fzf.vim'
 "[textobj-reactprop] custom text objects
 Plug 'kana/vim-textobj-user'
 
-"colorscheme pack
-Plug 'flazz/vim-colorschemes'
+" colorscheme
+Plug 'morhetz/gruvbox'
 
 "[notes] 
 Plug 'xolox/vim-misc'
@@ -112,6 +114,11 @@ set encoding=utf-8
 
 " syntax highlighting
 syntax on
+
+"colorscheme
+set termguicolors
+set background=dark
+colorscheme gruvbox
 
 " line numbers
 set relativenumber number
@@ -163,11 +170,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-let g:airline_theme = 'deus'
+let g:airline_theme = 'gruvbox'
 
-let g:airline_section_A = ''
-let g:airline_section_B = ''
-let g:airline_section_C = ''
+let g:airline_section_b = ''
+let g:airline_section_c = ''
 let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = ''
@@ -230,13 +236,8 @@ nmap <space> <Plug>(coc-codeaction)
 
 nmap f <Plug>(coc-format)
 
-"colorscheme
-set t_Co=256
-colorscheme gruvbox
-
 "disables automatic comment character insertion
 au FileType * set fo-=c fo-=r fo-=o
-
 
 " save 
 nmap s :w<CR>
