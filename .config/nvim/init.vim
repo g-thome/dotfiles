@@ -70,6 +70,8 @@ Plug 'vim-airline/vim-airline-themes'
 "analytics
 Plug 'wakatime/vim-wakatime'
 
+"css sytnax highlighting
+Plug 'hail2u/vim-css3-syntax'
 
 "[unix commands]
 Plug 'tpope/vim-eunuch'
