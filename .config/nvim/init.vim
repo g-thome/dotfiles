@@ -83,6 +83,10 @@ Plug 'preservim/nerdtree'
 " svelte syntax highlighting
 Plug 'evanleck/vim-svelte'
 
+"fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 ""
 ""dependencies
 "[textobj-reactprop] custom text objects
@@ -93,9 +97,6 @@ Plug 'flazz/vim-colorschemes'
 
 "[notes] 
 Plug 'xolox/vim-misc'
-
-"[language client]
-Plug 'junegunn/fzf', { 'do': './install --bin' }
 
 call plug#end()
 
@@ -279,7 +280,7 @@ nmap q :bdelete<CR>
 nmap Q :q!<CR>
 nmap <silent> <C-Q> :q!<CR>
 imap <silent> <C-Q> <C-O>:q!<CR>
-tnoremap <Esc> <C-\><C-n>:q!<CR>
+tnoremap <Esc> <C-\><C-n>
 
 "insert at the end of line in insert mode
 imap <C-A> <C-O>A
@@ -298,3 +299,5 @@ nnoremap 'c ci'
 nnoremap 'C ca'
 nnoremap )c ci)
 nnoremap )C ca)
+
+set grepprg=rg
