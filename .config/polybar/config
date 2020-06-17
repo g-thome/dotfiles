@@ -23,7 +23,6 @@ primary = #FFFFFF
 urgent = #FF0000
 
 [bar/main]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
 fixed-center = false
@@ -47,15 +46,10 @@ font-4 = "Font Awesome 5 Free Solid:pixelsize=9:0"
 
 modules-left =  i3 
 modules-center = xwindow
-modules-right = xbacklight mpd pulseaudio time
+modules-right = xbacklight pulseaudio time usd
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
-
-;wm-restack = i3
-
-;override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -79,43 +73,31 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
-; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background}
 label-focused-underline = ${colors.foreground}
 label-focused-padding = 2
 
-; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
 label-unfocused-padding = 2
 
-; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
-; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${colors.urgent}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  
-
-label-song-maxlen = 250
-label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -176,11 +158,16 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground}
 
+[module/usd]
+type = custom/script
+exec = currency
+interval = 3200
+format = <label>
+label = R$ %output%
+
 [settings]
 screenchange-reload = true
 
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-; vim:ft=dosini

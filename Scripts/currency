@@ -1,0 +1,6 @@
+#!/bin/bash
+response=$(curl -s 'http://freecurrencyrates.com/api/action.php?do=cvals&iso=brl&f=usd&v=1&s=cbr')
+
+value=$(echo $response | jq '.BRL')
+
+printf "%0.2f" $value
