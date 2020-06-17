@@ -1,12 +1,7 @@
 #!/bin/sh
-#
-# ~/.xinitrc
 
 # hold caps_lock -> super
 setxkbmap -option caps:super
-
-# keyboard layouts
-# setxkbmap -model pc104 -layout us,us_intl,ir,jp grp:alt_shift_toggle
 
 # press caps_lock -> esc
 killall xcape 2>/dev/null; xcape -e 'Super_L=Escape'
@@ -17,14 +12,20 @@ picom -b
 # keybindings
 xbindkeys -f ~/.config/xbindkeysrc
 
+# input method
 fcitx -d
 
 # notifications manager
 dunst > /dev/null 2>&1 &
 
+# network manager systray icon
 nm-applet &
 
+# status bar and systray
 polybar &
+
+# wallpaper
+xwallpaper --zoom that_one_shadow_of_the_colossus_wallpaper_everyone_loves.jpg 
 
 # necessário para usar o mailspring
 dbus-update-activation-environment --systemd DISPLAY
