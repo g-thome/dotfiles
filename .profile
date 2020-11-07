@@ -16,8 +16,6 @@ export NNN_OPS_PROG=1
 
 export GOPATH="$HOME/go"
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 eval "$(nodenv init -)"
 
 . "/home/gabriel/.bashrc"

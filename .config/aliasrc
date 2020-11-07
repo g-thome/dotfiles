@@ -26,7 +26,7 @@ alias nst="npm start"
 alias nrn="npm run"
 
 # pacman
-alias pacman="pacman --color auto"
+alias pacman="yay --color auto"
 alias p="sudo pacman --noconfirm"
 alias psh="pacman -Sh"
 alias psi="pacman -Si"
@@ -40,12 +40,6 @@ alias pqd="pacman -Qd"
 alias pqu="pacman -Qu"
 alias pqs="pacman -Qs"
 alias pr="sudo pacman -Rns"
-
-#aur
-alias yay="yay --color=auto"
-alias a="yay --noconfirm" 
-alias au="yay -Syu"
-alias ass="yay -Ss"
 
 # git
 alias g="git"

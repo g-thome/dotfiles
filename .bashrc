@@ -9,17 +9,6 @@
 # allows ctrl-s as save command for vim
 stty -ixon
 
-export PS1="[\u@\w]\[\e[32m\]\`parse_git_branch\`\[\e[m\] "
-# Change the window title of X terminals
-case ${TERM} in
-	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-		;;
-	screen*)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-		;;
-esac
-
 use_color=true
 
 unset use_color safe_term match_lhs sh
@@ -38,6 +27,12 @@ shopt -s expand_aliases
 
 # implicit cd
 shopt -s autocd
+
+# PS1
+eval "$(starship init bash)"
+
+# swap caps lock and esc
+setxkbmap -option caps:swapescape
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
