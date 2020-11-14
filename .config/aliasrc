@@ -21,13 +21,18 @@ alias vi="nvim"
 alias vim="nvim"
 
 # npm
+alias nit="npm init -y"
 alias ni="npm install"
+alias nid="npm install -D"
+alias nig="npm install -g"
 alias nst="npm start"
 alias nrn="npm run"
+alias ndv="npm run dev"
+alias nbd="npm run build"
 
 # pacman
 alias pacman="yay --color auto"
-alias p="sudo pacman --noconfirm"
+alias pi="pacman -S --noconfirm"
 alias psh="pacman -Sh"
 alias psi="pacman -Si"
 alias psg="pacman -Sg"

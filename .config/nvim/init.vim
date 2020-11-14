@@ -3,9 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript', {'for': 'js'}
 Plug 'mxw/vim-jsx', {'for': 'js'}
 
-"emmet
-Plug 'mattn/emmet-vim', { 'for': 'html' }
-
 "colored color codes
 Plug 'ap/vim-css-color'
 
@@ -47,8 +44,6 @@ Plug 'mustache/vim-mustache-handlebars'
  
 "language client
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-tsserver', {'do': 'npm install --frozen-lockfile'}
-Plug 'neoclide/coc-rls', {'do': 'npm install --frozen-lockfile'}
 
 "disables search highlighting
 Plug 'romainl/vim-cool'
@@ -78,6 +73,9 @@ Plug 'liuchengxu/vim-clap'
 " project structure
 Plug 'preservim/nerdtree'
 
+"editor config 
+Plug 'editorconfig/editorconfig-vim'
+
 ""
 ""dependencies
 "[textobj-reactprop] custom text objects
@@ -93,10 +91,6 @@ Plug 'xolox/vim-misc'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 
 call plug#end()
-
-" python
-let g:python_host_prog = '~/.pyenv/versions/nvim_2/bin/python'
-let g:python3_host_prog = expand('~/.pyenv/versions/nvim_3/bin/python')
 
 "node
 let g:node_host_prog = '~/.nodenv/versions/14.10.1/lib/node_modules/neovim/bin/cli.js'
@@ -220,10 +214,14 @@ endfunction
 
 nmap R <Plug>(coc-rename)
 
+"code action
+nmap <leader>qf  <Plug>(coc-fix-current)
 xmap <space> <Plug>(coc-codeaction)
 nmap <space> <Plug>(coc-codeaction)
+vmap <space> <Plug>(coc-codeaction)
 
 nmap f <Plug>(coc-format)
+vmap f <Plug>(coc-format-selected)
 
 "colorscheme
 set t_Co=256
