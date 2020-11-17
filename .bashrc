@@ -31,6 +31,10 @@ shopt -s autocd
 # PS1
 eval "$(starship init bash)"
 
+
+# node version control
+eval "$(nodenv init -)"
+
 # swap caps lock and esc
 setxkbmap -option caps:swapescape
 

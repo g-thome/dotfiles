@@ -76,6 +76,10 @@ Plug 'preservim/nerdtree'
 "editor config 
 Plug 'editorconfig/editorconfig-vim'
 
+"fuzzy search
+Plug 'junegunn/fzf' 
+Plug 'junegunn/fzf.vim', { 'do': './install --bin' }
+
 ""
 ""dependencies
 "[textobj-reactprop] custom text objects
@@ -86,9 +90,6 @@ Plug 'flazz/vim-colorschemes'
 
 "[notes] 
 Plug 'xolox/vim-misc'
-
-"[language client]
-Plug 'junegunn/fzf', { 'do': './install --bin' }
 
 call plug#end()
 
@@ -225,7 +226,7 @@ vmap f <Plug>(coc-format-selected)
 
 "colorscheme
 set t_Co=256
-colorscheme gruvbox
+" colorscheme ayu
 
 "disables automatic comment character insertion
 au FileType * set fo-=c fo-=r fo-=o

@@ -16,6 +16,5 @@ export NNN_OPS_PROG=1
 
 export GOPATH="$HOME/go"
 
-eval "$(nodenv init -)"
 
 . "/home/gabriel/.bashrc"
