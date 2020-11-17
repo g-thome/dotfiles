@@ -1,9 +1,7 @@
 #!/bin/sh
 
 # shows application ram usage
-local sum
-local items
-local app="$1"
+app="$1"
 if [ -z "$app" ]; then
   echo "First argument - pattern to grep from processes"
 else
