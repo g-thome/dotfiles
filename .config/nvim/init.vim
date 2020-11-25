@@ -120,6 +120,10 @@ set expandtab
 set nobackup
 set nowritebackup
 
+"buffer navigation
+nnoremap - :bp<CR>
+nnoremap + :bn<CR>
+
 " persistent undo
 if !isdirectory($HOME."/.config/nvim/undo-dir")
   call mkdir($HOME."/.config/nvim/undo-dir", "", 0700)
@@ -215,14 +219,25 @@ endfunction
 
 nmap R <Plug>(coc-rename)
 
-"code action
-nmap <leader>qf  <Plug>(coc-fix-current)
-xmap <space> <Plug>(coc-codeaction)
-nmap <space> <Plug>(coc-codeaction)
-vmap <space> <Plug>(coc-codeaction)
+" Map function and class text objects
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
 
-nmap f <Plug>(coc-format)
-vmap f <Plug>(coc-format-selected)
+"code action
+nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>qf  <Plug>(coc-fix-current)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+"diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "colorscheme
 set t_Co=256
@@ -244,20 +259,20 @@ nmap , <C-U>
 vmap , <C-U>
 
 "end of file
-nmap J G
-vmap J G
+nmap J <C-End>
+vmap J <C-End>
 
 " end of line
-nmap L $
-vmap L $
+nmap L <End>
+vmap L <End>
 
 " start of file
-nmap K gg
-vmap K gg
+nmap K <C-home>
+vmap K <C-home>
 
 " start of line
-nmap H 0
-vmap H 0
+nmap H <Home>
+vmap H <Home>
 
 " navigate splits smoothly
 nnoremap <C-J> <C-W><C-J>
