@@ -93,6 +93,8 @@ Plug 'xolox/vim-misc'
 
 call plug#end()
 
+set ignorecase
+
 "node
 let g:node_host_prog = '~/.nodenv/versions/14.10.1/lib/node_modules/neovim/bin/cli.js'
 

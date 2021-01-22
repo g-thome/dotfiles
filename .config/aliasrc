@@ -93,3 +93,10 @@ alias d="sudo docker"
 alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
 alias ytv="youtube-dl --add-metadata -f bestvideo+bestaudio/best -o '~/Videos/%(title)s.%(ext)s'"
 
+# rocketchat
+alias drop="mongo --eval 'db.dropDatabase()'"
+alias web="cd ~/Documents/web"
+alias mtest="meteor npm test"
+alias m="meteor"
+alias mi="MONGO_URL=mongodb://localhost/initialized MONGO_OPLOG_URL=mongodb://localhost/local meteor"
+alias me="MONGO_URL=mongodb://localhost/empty MONGO_OPLOG_URL=mongodb://localhost/local TEST_MODE=true meteor"

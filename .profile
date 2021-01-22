@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$PATH:$(find /home/gabriel/scripts -type d -printf ":%p"):~/.cargo/bin"
+export PATH="$PATH:$(find /home/gabriel/scripts -type d -printf ":%p"):~/.cargo/bin:/snap/bin"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL="alacritty"
 export VISUAL="nvim"

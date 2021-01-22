@@ -4,14 +4,8 @@
 
 [[ $- != *i* ]] && return
 
-[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
-
 # allows ctrl-s as save command for vim
 stty -ixon
-
-use_color=true
-
-unset use_color safe_term match_lhs sh
 
 xhost +local:root > /dev/null 2>&1
 
@@ -25,22 +19,13 @@ shopt -s checkwinsize
 
 shopt -s expand_aliases
 
-# implicit cd
-shopt -s autocd
-
 # PS1
 eval "$(starship init bash)"
-
 
 # node version control
 eval "$(nodenv init -)"
 
-# swap caps lock and esc
-setxkbmap -option caps:swapescape
-
-# Enable history appending instead of overwriting.  #139609
+# Enable history appending instead of overwriting. 
 shopt -s histappend
 
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc" 
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
