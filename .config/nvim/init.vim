@@ -147,6 +147,7 @@ set shortmess+=c
 " NERDTree
 nmap ; :NERDTreeToggle<CR>
 inoremap <C-t> :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
 
 "vim-go
 let g:go_def_mapping_enabled = 0
