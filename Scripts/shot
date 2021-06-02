@@ -1,0 +1,28 @@
+#!/bin/sh
+
+DIR=~/Pictures/Screenshots
+
+while getopts 's' opt; do
+  case "${opt}" in
+    s) selection=1 ;;
+  esac
+done
+
+if [ ${selection} ]
+then
+  img=$(maim -s -b 10000 -r blur1,blur2 -f png | base64)
+else
+  img=$(maim -f png | base64)
+fi
+
+filename="$(rofi -dmenu -l 0 -p "ENTER FILENAME")"
+
+if [ -z "$filename" ]
+then
+  exit
+elif [ -f "$DIR/$filename.png" ]
+then
+  filename="$filename-copy"
+fi
+
+echo "$img" | base64 --decode > "$DIR/$filename.png"

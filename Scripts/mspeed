@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# set mouse speed
+xinput set-prop 8 141 $1 0 0 0 $1 0 0 0 1
