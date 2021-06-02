@@ -1,4 +1,15 @@
 #!/bin/sh
+# alias
+alias aliasls="alias | grep --color=never ls"
+alias aliasgrep="alias | grep --color=never grep"
+alias aliasnpm="alias | grep --color=never npm"
+alias aliaspacman="alias | grep --color=never pacman"
+alias aliasyay="alias | grep --color=never yay"
+alias aliasaur="aliasyay"
+alias aliassystemd="alias | grep --color=never systemctl"
+alias aliasdocker="alias | grep --color=never docker"
+alias aliasyoutubedl="alias | grep --color=never youtube"
+
 # misc
 alias cp="cp -i"
 alias df="df -h"
@@ -9,13 +20,11 @@ alias ls="ls --color=auto"
 alias la="ls -a"
 alias ll="ls -la"
 
-# grep
-alias grep="grep --color=auto"
-alias egrep="egrep --auto=color"
-alias fgrep="fgrep --auto=color"
-alias ccat="highlight --out-format=ansi"
+# ripgrep
+alias rg="rg --color=auto"
+alias grep="rg --color=auto"
 
-# editor
+# nvim
 alias e="nvim"
 alias vi="nvim"
 alias vim="nvim"
@@ -27,17 +36,16 @@ alias nid="npm install -D"
 alias nig="npm install -g"
 alias nst="npm start"
 alias nrn="npm run"
-alias ndv="npm run dev"
-alias nbd="npm run build"
+alias nls="npm ls --depth 0"
 
 # pacman
-alias pacman="yay --color auto"
-alias pi="pacman -S --noconfirm"
+alias pacman="pacman --color auto"
+alias p="sudo pacman --noconfirm"
 alias psh="pacman -Sh"
 alias psi="pacman -Si"
 alias psg="pacman -Sg"
 alias psy="sudo pacman -Sy"
-alias psu="sudo pacman -Syyu"
+alias psu="sudo pacman -Syu"
 alias pss="pacman -Ss"
 alias pqh="pacman -Qh"
 alias pqi="pacman -Qi"
@@ -45,6 +53,12 @@ alias pqd="pacman -Qd"
 alias pqu="pacman -Qu"
 alias pqs="pacman -Qs"
 alias pr="sudo pacman -Rns"
+
+#aur
+alias yay="yay --aur --color=auto"
+alias a="yay --noconfirm" 
+alias au="yay -Syu"
+alias ass="yay -Ss"
 
 # git
 alias g="git"
@@ -56,6 +70,7 @@ alias gpl="git pull"
 alias gre="git remote"
 alias glg="git log"
 alias gck="git checkout"
+alias gb="git branch"
 alias gbls="git branch -a"
 alias gad="git add"
 alias gdf="git diff"
@@ -63,8 +78,9 @@ alias gcl="git clone"
 alias grt="git reset"
 alias grtl="git reset --soft HEAD~1"
 alias gmr="git merge"
-alias grb="git rebase"
 alias gtg="git tag"
+alias gfc="git fetch"
+alias grb="git rebase"
 
 # yadm
 alias y="yadm"
@@ -79,6 +95,7 @@ alias yad="yadm add"
 alias ydf="yadm diff"
 alias yrt="yadm reset"
 alias yrtl="yadm reset --soft HEAD~1"
+alias yrb="yadm rebase"
 
 # systemd
 alias s="sudo systemctl"
@@ -91,7 +108,7 @@ alias se="sudo systemctl enable"
 alias d="sudo docker"
 
 #youtube-dl
-alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
+alias yta="youtube-dl --add-metadata --extract-audio --audio-format mp3 -o '~/Music/%(artist)s/%(album)s/%(track)s.%(ext)s'"
 alias ytv="youtube-dl --add-metadata -f bestvideo+bestaudio/best -o '~/Videos/%(title)s.%(ext)s'"
 
 # rocketchat

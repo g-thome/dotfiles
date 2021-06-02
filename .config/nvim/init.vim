@@ -1,7 +1,11 @@
-call plug#begin('~/.vim/plugged') 
+call plug#begin('~/.vim/plugged')
+
 "js syntax highlighting
 Plug 'pangloss/vim-javascript', {'for': 'js'}
 Plug 'mxw/vim-jsx', {'for': 'js'}
+
+"emmet
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 "colored color codes
 Plug 'ap/vim-css-color'
@@ -44,12 +48,14 @@ Plug 'mustache/vim-mustache-handlebars'
  
 "language client
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
 
 "disables search highlighting
 Plug 'romainl/vim-cool'
 
 "markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 "javascript import size
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
@@ -64,6 +70,7 @@ Plug 'vim-airline/vim-airline-themes'
 "analytics
 Plug 'wakatime/vim-wakatime'
 
+
 "[unix commands]
 Plug 'tpope/vim-eunuch'
 
@@ -73,12 +80,8 @@ Plug 'liuchengxu/vim-clap'
 " project structure
 Plug 'preservim/nerdtree'
 
-"editor config 
-Plug 'editorconfig/editorconfig-vim'
-
-"fuzzy search
-Plug 'junegunn/fzf' 
-Plug 'junegunn/fzf.vim', { 'do': './install --bin' }
+" svelte syntax highlighting
+Plug 'evanleck/vim-svelte'
 
 ""
 ""dependencies
@@ -91,12 +94,18 @@ Plug 'flazz/vim-colorschemes'
 "[notes] 
 Plug 'xolox/vim-misc'
 
+"[language client]
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
-set ignorecase
+" python
+let g:python_host_prog = '~/.pyenv/versions/nvim_2/bin/python'
+let g:python3_host_prog = expand('~/.pyenv/versions/nvim_3/bin/python')
 
 "node
-let g:node_host_prog = '~/.nodenv/versions/14.10.1/lib/node_modules/neovim/bin/cli.js'
+let g:node_host_prog = '~/.nodenv/versions/12.16.1/lib/node_modules/neovim/bin/cli.js'
 
 " text encoding
 set encoding=utf-8
@@ -122,10 +131,6 @@ set expandtab
 set nobackup
 set nowritebackup
 
-"buffer navigation
-nnoremap - :bp<CR>
-nnoremap + :bn<CR>
-
 " persistent undo
 if !isdirectory($HOME."/.config/nvim/undo-dir")
   call mkdir($HOME."/.config/nvim/undo-dir", "", 0700)
@@ -147,7 +152,6 @@ set shortmess+=c
 " NERDTree
 nmap ; :NERDTreeToggle<CR>
 inoremap <C-t> :NERDTreeToggle<CR>
-let g:NERDTreeWinPos = "right"
 
 "vim-go
 let g:go_def_mapping_enabled = 0
@@ -222,29 +226,13 @@ endfunction
 
 nmap R <Plug>(coc-rename)
 
-" Map function and class text objects
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+xmap <space> <Plug>(coc-codeaction)
+nmap <space> <Plug>(coc-codeaction)
 
-"code action
-nmap <leader>ac  <Plug>(coc-codeaction)
-nmap <leader>qf  <Plug>(coc-fix-current)
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-"diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap f <Plug>(coc-format)
 
 "colorscheme
 set t_Co=256
-" colorscheme ayu
 
 "disables automatic comment character insertion
 au FileType * set fo-=c fo-=r fo-=o
@@ -262,20 +250,20 @@ nmap , <C-U>
 vmap , <C-U>
 
 "end of file
-nmap J <C-End>
-vmap J <C-End>
+nmap J G
+vmap J G
 
 " end of line
-nmap L <End>
-vmap L <End>
+nmap L $
+vmap L $
 
 " start of file
-nmap K <C-home>
-vmap K <C-home>
+nmap K gg
+vmap K gg
 
 " start of line
-nmap H <Home>
-vmap H <Home>
+nmap H 0
+vmap H 0
 
 " navigate splits smoothly
 nnoremap <C-J> <C-W><C-J>
@@ -306,3 +294,7 @@ nnoremap 'c ci'
 nnoremap 'C ca'
 nnoremap )c ci)
 nnoremap )C ca)
+
+"cycle tabs
+nmap - :bp<CR>
+nmap + :bn<CR>

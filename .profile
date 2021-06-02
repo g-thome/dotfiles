@@ -1,14 +1,23 @@
 #!/bin/sh
 
-export PATH="$PATH:$(find /home/gabriel/scripts -type d -printf ":%p"):~/.cargo/bin:/snap/bin"
+export PATH="$PATH:$(find ~/Scripts -type d -printf ":%p"):$HOME/go/bin"
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export VISUAL="nvim"
 export EDITOR="nvim"
 export READER="zathura"
 export BROWSER="firefox"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
 export GOPATH="$HOME/go"
+export GOBIN="$HOME/go/bin"
 
+export FZF_DEFAULT_COMMAND='rg --files'
 
-. "/home/gabriel/.bashrc"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+. "~/.bashrc"
+
+[ ! $DISPLAY ] && [ $XDG_VTNR -eq 1 ] && exec startx
