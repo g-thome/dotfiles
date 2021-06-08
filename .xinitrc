@@ -20,9 +20,14 @@ xbindkeys -f ~/.config/xbindkeysrc
 # notifications manager
 dunst > /dev/null 2>&1 &
 
+# network tray icon
 nm-applet &
 
-wpc --directory ~/Pictures/Wallpapers --maxage 6 --background --local
+# set wallpaper at random from wallpapers directory
+xwallpaper --zoom $(ls ~/Pictures/Wallpapers | sort -R | tail -1)
+
+# monitors; should change this to a script later
+xrandr --output HDMI-1-0 --auto --primary --right-of eDP-1
 
 # window manager
 exec i3
