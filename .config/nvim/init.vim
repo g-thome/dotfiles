@@ -4,6 +4,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript', {'for': 'js'}
 Plug 'mxw/vim-jsx', {'for': 'js'}
 
+"tsx
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 "emmet
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
@@ -50,6 +54,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
+Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
 
 "disables search highlighting
 Plug 'romainl/vim-cool'
@@ -79,6 +84,9 @@ Plug 'liuchengxu/vim-clap'
 
 " project structure
 Plug 'preservim/nerdtree'
+
+"just syntax highlighting
+Plug 'NoahTheDuke/vim-just'
 
 " svelte syntax highlighting
 Plug 'evanleck/vim-svelte'
