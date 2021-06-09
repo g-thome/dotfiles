@@ -28,7 +28,7 @@ nm-applet &
 xrandr --output HDMI-1-0 --auto --primary --right-of eDP-1
 
 # set wallpaper at random from wallpapers directory
-xwallpaper --zoom $(ls ~/Pictures/Wallpapers | sort -R | tail -1)
+xwallpaper --zoom "$(fd . ~/Pictures/Wallpapers | sort -R | tail -1)"
 
 # window manager
 exec i3
