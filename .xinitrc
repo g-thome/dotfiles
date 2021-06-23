@@ -30,6 +30,7 @@ xrandr --output HDMI-1-0 --auto --primary --right-of eDP-1
 # set wallpaper at random from wallpapers directory
 xwallpaper --zoom "$(fd . ~/Pictures/Wallpapers | sort -R | tail -1)"
 
+polybar -r main &
+
 # window manager
 exec i3
-
