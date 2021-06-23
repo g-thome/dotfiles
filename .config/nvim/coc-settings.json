@@ -1,4 +1,10 @@
 {
   "eslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": ["rs"]
+  "coc.preferences.formatOnSaveFiletypes": ["rs"],
+  "coc.preferences.rootPatterns": [
+    ".python-root",
+    ".git",
+    ".hg",
+    ".projections.json"
+  ]
 }
