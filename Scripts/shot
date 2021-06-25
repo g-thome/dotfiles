@@ -10,19 +10,9 @@ done
 
 if [ ${selection} ]
 then
-  img=$(maim -s -b 10000 -r blur1,blur2 -f png | base64)
+  maim -s -b 10000 -r blur1,blur2 -f png /dev/stdout | \
+  xclip -selection clipboard -t image/png -i
 else
-  img=$(maim -f png | base64)
+  maim -f png | xclip -selection clipboard -t image/png -i
 fi
 
-filename="$(rofi -dmenu -l 0 -p "ENTER FILENAME")"
-
-if [ -z "$filename" ]
-then
-  exit
-elif [ -f "$DIR/$filename.png" ]
-then
-  filename="$filename-copy"
-fi
-
-echo "$img" | base64 --decode > "$DIR/$filename.png"
