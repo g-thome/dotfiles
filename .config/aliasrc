@@ -1,0 +1,66 @@
+#!/bin/sh
+# misc
+alias cp="cp -i"
+alias df="df -h"
+alias free="free -m"
+
+# ls
+alias ls="ls --color=auto"
+alias la="ls -a"
+alias ll="ls -la"
+
+# ripgrep
+alias rg="rg --color=auto"
+alias grep="rg --color=auto"
+
+# nvim
+alias e="nvim"
+alias vi="nvim"
+alias vim="nvim"
+
+# npm
+alias nit="npm init -y"
+alias ni="npm install"
+alias nid="npm install -D"
+alias nig="npm install -g"
+alias nst="npm start"
+alias nrn="npm run"
+alias nls="npm ls --depth 0"
+
+# git
+alias g="git"
+alias gst="git init"
+alias gss="git status"
+alias gct="git commit -m"
+alias gps="git push"
+alias gpl="git pull"
+alias gre="git remote"
+alias glg="git log"
+alias gck="git checkout"
+alias gb="git branch"
+alias gbls="git branch -a"
+alias gad="git add"
+alias gdf="git diff"
+alias gcl="git clone"
+alias grt="git reset"
+alias grtl="git reset --soft HEAD~1"
+alias gmr="git merge"
+alias gtg="git tag"
+alias gfc="git fetch"
+alias grb="git rebase"
+
+# yadm
+alias y="yadm"
+alias yss="yadm status"
+alias yct="yadm commit -m"
+alias yps="yadm push"
+alias ypl="yadm pull"
+alias yre="yadm remote"
+alias ylg="yadm log"
+alias yck="yadm checkout"
+alias yad="yadm add"
+alias ydf="yadm diff"
+alias yrt="yadm reset"
+alias yrtl="yadm reset --soft HEAD~1"
+alias yrb="yadm rebase"
+

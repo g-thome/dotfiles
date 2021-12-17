@@ -1,0 +1,9 @@
+[git_branch]
+symbol = ""
+
+[nodejs]
+format = "using nodejs [$version](bold green)"
+version_format = "v${major}"
+
+[cmd_duration]
+disabled = true
