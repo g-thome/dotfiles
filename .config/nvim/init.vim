@@ -31,8 +31,11 @@ Plug 'terryma/vim-multiple-cursors'
 "commentstuff out
 Plug 'tpope/vim-commentary'
 
-"language client
-Plug 'neovim/nvim-lspconfig'
+"lsp 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 "disables search highlighting
 Plug 'romainl/vim-cool'
@@ -42,6 +45,8 @@ Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 
 "git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'rbong/vim-flog'
 
 "status bar
 Plug 'vim-airline/vim-airline'
@@ -66,12 +71,33 @@ Plug 'evanleck/vim-svelte'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" color scheme
+" color schemes
 Plug 'Mofiqul/dracula.nvim'
+Plug 'sainnhe/edge'
+Plug 'chriskempson/tomorrow-theme'
+
+" visualize undo tree
+Plug 'mbbill/undotree'
+
+" start screen
+Plug 'mhinz/vim-startify'
+
+" focus mode
+Plug 'chrisbra/NrrwRgn'
+
+" smooth scrolling
+Plug 'psliwka/vim-smoothie'
+
+" DB client
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
+" auto save
+Plug 'Pocco81/auto-save.nvim'
 
 call plug#end()
 
-colorscheme dracula
+colorscheme Tomorrow
 hi Normal guibg=NONE ctermbg=NONE
 
 " python
@@ -100,7 +126,7 @@ set clipboard+=unnamedplus
 set autoread
 
 " search case insensitive by default
-set ignorecase
+set ignorecase smartcase
 
 " tabs
 set tabstop=2
@@ -136,13 +162,17 @@ inoremap <silent> <C-t> :NERDTreeToggle<CR>
 let g:go_def_mapping_enabled = 0
 
 "vim-closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.hbs,*.svelte'
+let g:closetag_filenames = '*.html,*.xhtml,*.hbs,*.svelte,*tsx'
+
+let g:db_ui_env_variable_url = 'mysql://root:root@localhost:3306/gvng_staging'
 
 "airline
+let g:airline_theme = 'tomorrow'
 let g:airline#extensions#tabline#enabled = 1
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+let g:airline_section_a = airline#section#create(['mode'])
 let g:airline_section_b = ''
 let g:airline_section_c = ''
 let g:airline_section_x = ''
@@ -163,18 +193,22 @@ let g:airline_mode_map = {
 \ '^S' : 'S',
 \ }
 
+ let g:airline_filetype_overrides = {
+      \ 'nerdtree': [ get(g:, 'NERDTreeStatusline', 'NERD'), '' ],
+      \ 'startify': [ 'startify', '' ],
+      \ 'vim-plug': [ 'Plugins', '' ],
+      \ }
+
 
 "disables automatic comment character insertion
 au FileType * set fo-=c fo-=r fo-=o
 
-" save 
-nmap s :w<CR>
-vmap <silent> <C-S>   <C-C>:update<CR>
-imap <silent> <C-S>   <C-O>:update<CR>
+" window commands
+nnoremap s <C-w>
 
 " cycle buffers
 nmap - :bp<CR>
-nmap + :bn<CR>
+nmap = :bn<CR>
 
 " up and down
 nmap m <C-D>
@@ -225,40 +259,32 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 
-"object-verb order
-nnoremap "d di"
-nnoremap "D da"
-nnoremap 'd di'
-nnoremap 'D da'
-nnoremap )d di)
-nnoremap )D da)
-
-nnoremap "c ci"
-nnoremap "C ca"
-nnoremap 'c ci'
-nnoremap 'C ca'
-nnoremap )c ci)
-nnoremap )C ca)
-
 set grepprg=rg 
 
-" LSP
-lua << EOF
-require'lspconfig'.rust_analyzer.setup{}
-require'lspconfig'.gopls.setup{}
-require'lspconfig'.sourcekit.setup{}
-require'lspconfig'.tsserver.setup{}
-EOF
+" vim gutter delay
+set updatetime=100
 
-nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
-"nnoremap <silent> gi :lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> <leader>rn :lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> <leader>. :lua vim.lsp.buf.code_action()<CR>
-nnoremap <silent> gr :lua vim.lsp.buf.references()<CR>
-nnoremap <silent> <leader>e :lua vim.diagnostic.open_float()<CR>
-nnoremap <silent> <leader>f :lua vim.lsp.buf.format{async = true}<CR>
-nnoremap <silent> <leader>n :lua vim.diagnostic.goto_next()<CR>
-nnoremap <silent> <leader>p :lua vim.diagnostic.goto_prev()<CR>
-nnoremap <silent> <leader>D :lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> gD :vim.lsp.buf.declaration()<CR>
-nnoremap <silent> ? :lua vim.lsp.buf.hover()<CR>
+let g:gitgutter_max_signs=-1
+
+" LSP
+let g:LanguageClient_serverCommands = {
+    \ 'typescript': ['typescript-language-server', '--stdio'],
+    \ 'typescriptreact': ['typescript-language-server', '--stdio'],
+    \ 'rust': ['rust-analyzer']
+    \ }
+
+let g:LanguageClient_useVirtualText = "No"
+
+set completefunc=LanguageClient#complete
+
+nnoremap <silent> <F2> <Plug>(lcn-rename)
+inoremap <silent> <F2> <Plug>(lcn-rename)
+nnoremap <silent> ? <Plug>(lcn-hover)
+nnoremap <silent> [d <Plug>(lcn-diagnostics-prev)
+nnoremap <silent> ]d <Plug>(lcn-diagnostics-next)
+nnoremap <silent> <leader>f <Plug>(lcn-format)
+nnoremap <silent> <leader>e <Plug>(lcn-explain-error)
+nnoremap <silent> <leader>. <Plug>(lcn-code-action)
+nnoremap <silent> gd <Plug>(lcn-definition)
+nnoremap <silent> gt <Plug>(lcn-type-definition)
+nnoremap <silent> gr <Plug>(lcn-references)
